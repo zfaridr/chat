@@ -1,0 +1,13 @@
+stuff:
+- table
+- sofa
+- cupboard
+- window
+- chair
+stuff_amount: 4
+stuff_ptice:
+  table: 100¥-1000¥
+  sofa: 1000€-3000€
+  cupboard: 500€-100€
+  window: 200€-400€
+  chair: 100¥-200¥
