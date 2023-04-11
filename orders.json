@@ -1,0 +1,25 @@
+{
+    "orders": [
+        {
+            "item": "laptop",
+            "quantity": "1",
+            "price": "2000",
+            "buyer": "Ivaniv I.I.",
+            "date": "06.04.2023"
+        },
+        {
+            "item": "computer",
+            "quantity": "2",
+            "price": "4000",
+            "buyer": "Petrov P.P.",
+            "date": "07.04.2023"
+        },
+        {
+            "item": "printer",
+            "quantity": "1",
+            "price": "1000",
+            "buyer": "Sidorov S.S.",
+            "date": "07.04.2023"
+        }
+    ]
+}
