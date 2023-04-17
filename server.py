@@ -12,6 +12,7 @@ def probe():
     
 
 def process_message():
+    client, addr = s.accept()
     data_client = client.recv(1000000)
     data_decode = data_client.decode('utf-8')
     data = json.loads(data_decode)
@@ -26,10 +27,12 @@ def process_message():
         client.send(json.dumps(data_to_send).encode('utf-8'))
         print(data['message'])
     elif data['action'] == 'quit':
-        client.send(json.dumps('Goodbye').encode('utf-8'))
+        data_to_send = 'Goodbye'
+        client.send(json.dumps(data_to_send).encode('utf-8'))
         print('Client leaved the chat')
         client.close()
-       
+    
+    return data_to_send
               
     
 if __name__ == "__main__":
