@@ -1,13 +1,21 @@
 from socket import *
 import time
 import json
+import logging
+import log.client_log_config
+import inspect
+
+chat_log = logging.getLogger('app.chat')
 
 s = socket(AF_INET,SOCK_STREAM)
 s.connect(('localhost', 8866))
 
+def log_function():
+    name = inspect.stack()[1][3]
+    chat_log.info(f'function was called: {name}')
 
 def presence(name):
-    
+    log_function()
     data = {
         "action": "presence",
         "time": time.time(),
@@ -22,12 +30,12 @@ def presence(name):
     s.send(data_to_send)
     msg_probe = s.recv(1000000).decode('utf-8')
     data_to_print = json.loads(msg_probe)
-    print(data_to_print)
+    chat_log.info(data_to_print)
     
     return data
 
 def chat_join():
-    
+    log_function()
     data = {
         "action": "join",
         "time": time.time(),
@@ -38,12 +46,12 @@ def chat_join():
     s.send(data_to_send)
     msg_join = s.recv(1000000).decode('utf-8')
     data_to_print = json.loads(msg_join)
-    print(data_to_print)
+    chat_log.info(data_to_print)
 
     return data_to_print
 
 def chat_message(name):
-  
+    log_function()
     message = str(input("Input you message "))
     data = {
         "action": "msg",
@@ -56,12 +64,12 @@ def chat_message(name):
     s.send(data_to_send)
     msg_msg = s.recv(1000000).decode('utf-8')
     data_to_print = json.loads(msg_msg)
-    print(data_to_print)
+    chat_log.info(data_to_print)
     
     return data_to_print
 
 def chat_quit():
-    
+    log_function()
     data = {
         "action": "quit",
         "time": time.time(),
@@ -71,7 +79,7 @@ def chat_quit():
     s.send(data_to_send)
     msg_quit = s.recv(1000000).decode('utf-8')
     data_to_print = json.loads(msg_quit)
-    print(data_to_print)
+    chat_log.info(data_to_print)
     s.close()
 
     return data_to_print

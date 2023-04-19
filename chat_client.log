@@ -1,0 +1,17 @@
+2023-04-19 11:27:36,615 INFO client.py You are in the chat
+2023-04-19 11:28:09,847 INFO client.py Goodbye
+2023-04-19 11:32:40,857 INFO client.py You are in the chat
+2023-04-19 11:33:09,986 INFO client.py Goodbye
+2023-04-19 11:52:54,423 INFO client.py function was called: + presence
+2023-04-19 11:52:54,427 INFO client.py You are online
+2023-04-19 11:52:57,144 INFO client.py function was called: + chat_join
+2023-04-19 11:53:06,168 INFO client.py function was called: + chat_join
+2023-04-19 11:53:11,216 INFO client.py function was called: + chat_message
+2023-04-19 11:53:13,324 INFO client.py Your message was recieved in the chat
+2023-04-19 11:53:18,831 INFO client.py function was called: + chat_quit
+2023-04-19 11:54:44,501 INFO client.py function was called: presence
+2023-04-19 11:54:44,503 INFO client.py You are online
+2023-04-19 11:54:50,107 INFO client.py function was called: chat_join
+2023-04-19 11:54:54,208 INFO client.py function was called: chat_message
+2023-04-19 11:54:55,615 INFO client.py Your message was recieved in the chat
+2023-04-19 11:54:59,573 INFO client.py function was called: chat_quit
