@@ -1,0 +1,5 @@
+2023-04-19 11:16:26,740 CRITICAL client_log_config.py Critical error
+2023-04-19 11:16:26,740 ERROR client_log_config.py Error!!!
+2023-04-19 11:16:26,740 WARNING client_log_config.py Warning! Warning!
+2023-04-19 11:16:26,740 DEBUG client_log_config.py Information about debuggging
+2023-04-19 11:16:26,740 INFO client_log_config.py Important info
