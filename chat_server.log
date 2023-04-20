@@ -8,3 +8,28 @@
 2023-04-19 11:54:47,419 INFO server.py Получен запрос на соединение от ('127.0.0.1', 35000)
 2023-04-19 11:54:55,615 INFO server.py fgh
 2023-04-19 11:54:58,352 INFO server.py Получен запрос на соединение от ('127.0.0.1', 38506)
+2023-04-20 10:20:41,709 INFO server.py Получен запрос на соединение от ('127.0.0.1', 59566)
+2023-04-20 10:20:41,714 INFO server.py function was called: process_message
+2023-04-20 10:23:04,587 INFO server.py Получен запрос на соединение от ('127.0.0.1', 39124)
+2023-04-20 10:23:04,589 INFO server.py function was called: process_message
+2023-04-20 10:25:03,475 INFO server.py Получен запрос на соединение от ('127.0.0.1', 35366)
+2023-04-20 10:25:03,476 INFO server.py function was called: process_message
+2023-04-20 10:27:43,646 INFO server.py Получен запрос на соединение от ('127.0.0.1', 46206)
+2023-04-20 10:27:43,648 INFO server.py function was called: process_message
+2023-04-20 10:32:18,838 INFO server.py Получен запрос на соединение от ('127.0.0.1', 42784)
+2023-04-20 10:32:18,842 INFO server.py function was called: process_message
+2023-04-20 10:33:28,817 INFO server.py Получен запрос на соединение от ('127.0.0.1', 59824)
+2023-04-20 10:33:28,818 INFO server.py function was called: process_message
+2023-04-20 10:33:37,072 INFO server.py fg
+2023-04-20 10:33:42,782 INFO server.py Получен запрос на соединение от ('127.0.0.1', 55690)
+2023-04-20 10:33:42,782 INFO server.py function was called: process_message
+2023-04-20 10:39:09,035 INFO server.py Получен запрос на соединение от ('127.0.0.1', 59760)
+2023-04-20 10:39:09,037 INFO server.py function was called: process_message
+2023-04-20 10:39:32,066 INFO server.py Получен запрос на соединение от ('127.0.0.1', 53820)
+2023-04-20 10:39:32,066 INFO server.py function was called: process_message
+2023-04-20 10:39:39,814 INFO server.py Client leaved the chat
+2023-04-20 10:41:10,110 INFO server.py Получен запрос на соединение от ('127.0.0.1', 38372)
+2023-04-20 10:43:47,610 INFO server.py function was called: process_message
+2023-04-20 10:43:50,801 INFO server.py Получен запрос на соединение от ('127.0.0.1', 39426)
+2023-04-20 10:43:58,736 INFO server.py Client leaved the chat
+2023-04-20 10:43:58,736 INFO server.py function was called: process_message

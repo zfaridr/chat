@@ -15,3 +15,30 @@
 2023-04-19 11:54:54,208 INFO client.py function was called: chat_message
 2023-04-19 11:54:55,615 INFO client.py Your message was recieved in the chat
 2023-04-19 11:54:59,573 INFO client.py function was called: chat_quit
+2023-04-20 10:20:41,716 INFO client.py function was called: <module>
+2023-04-20 10:23:04,595 INFO client.py function was called: <module>
+2023-04-20 10:23:04,596 INFO client.py function was called: <module>
+2023-04-20 10:23:04,596 INFO client.py function was called: <module>
+2023-04-20 10:23:04,597 INFO client.py function was called: <module>
+2023-04-20 10:24:21,272 INFO client.py function was called: <module>
+2023-04-20 10:24:21,275 INFO client.py function was called: <module>
+2023-04-20 10:24:21,275 INFO client.py function was called: <module>
+2023-04-20 10:24:21,276 INFO client.py function was called: <module>
+2023-04-20 10:25:03,488 INFO client.py function was called: <module>
+2023-04-20 10:25:03,491 INFO client.py function was called: <module>
+2023-04-20 10:25:03,492 INFO client.py function was called: <module>
+2023-04-20 10:25:03,492 INFO client.py function was called: <module>
+2023-04-20 10:27:43,653 INFO client.py function was called: <module>
+2023-04-20 10:31:16,031 INFO client.py function was called: <module>
+2023-04-20 10:33:21,029 INFO client.py You are online
+2023-04-20 10:33:21,034 INFO client.py function was called: main
+2023-04-20 10:33:37,073 INFO client.py Your message was recieved in the chat
+2023-04-20 10:33:37,075 INFO client.py function was called: main
+2023-04-20 10:39:28,767 INFO client.py You are in the chat
+2023-04-20 10:39:28,767 INFO client.py function was called: chat_join
+2023-04-20 10:39:39,814 INFO client.py Goodbye
+2023-04-20 10:39:39,814 INFO client.py function was called: chat_quit
+2023-04-20 10:43:47,610 INFO client.py You are in the chat
+2023-04-20 10:43:47,610 INFO client.py function was called: chat_join
+2023-04-20 10:43:58,737 INFO client.py Goodbye
+2023-04-20 10:43:58,737 INFO client.py function was called: chat_quit
