@@ -10,18 +10,26 @@ chat_log = logging.getLogger('app.chat')
 s = socket(AF_INET,SOCK_STREAM)
 s.connect(('localhost', 8866))
 
-def log_function():
-    name = inspect.stack()[1][3]
-    chat_log.info(f'function was called: {name}')
+class Logging():
+    def __init__(self):
+        pass
+    
+    def __call__(self, func):
+        def decorate(*args, **kwargs):
+            result = func(*args, **kwargs)
+            chat_log.info(f'function was called: {func.__name__}')
+            return result
+        
+        return decorate
 
-def presence(name):
-    log_function()
+@Logging()
+def presence(user_name):
     data = {
         "action": "presence",
         "time": time.time(),
         "type": "status",
         "user": {
-            "account_name": name,
+            "account_name": 'zfaridr',
             "status": "online"
 
         }
@@ -34,8 +42,9 @@ def presence(name):
     
     return data
 
+
+@Logging()
 def chat_join():
-    log_function()
     data = {
         "action": "join",
         "time": time.time(),
@@ -50,8 +59,9 @@ def chat_join():
 
     return data_to_print
 
+
+@Logging()
 def chat_message(name):
-    log_function()
     message = str(input("Input you message "))
     data = {
         "action": "msg",
@@ -68,8 +78,9 @@ def chat_message(name):
     
     return data_to_print
 
+
+@Logging()
 def chat_quit():
-    log_function()
     data = {
         "action": "quit",
         "time": time.time(),

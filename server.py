@@ -11,17 +11,26 @@ s = socket(AF_INET, SOCK_STREAM)
 s.bind(('', 8866))
 s.listen(10)
 
-def log_function():
-    name = inspect.stack()[1][3]
-    chat_log.info(f'function was called: {name}')
+class Logging():
+    def __init__(self):
+        pass
+    
+    def __call__(self, func):
+        def decorate(*args, **kwargs):
+            result = func(*args, **kwargs)
+            chat_log.info(f'function was called: {func.__name__}')
+            return result
+        
+        return decorate
 
+@Logging()
 def probe():
     data_to_send = f"You are online + {time.ctime(time.time())}"
     client.send(json.dumps(data_to_send).encode('utf-8'))
     
 
+@Logging()
 def process_message():
-    log_function()
     client, addr = s.accept()
     data_client = client.recv(1000000)
     data_decode = data_client.decode('utf-8')
