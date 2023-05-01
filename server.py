@@ -60,6 +60,7 @@ def new_socket(adress):
 def process_client():
     adress = ('', 8668)
     clients = []
+    messages = []
     s_connect = new_socket(adress)
 
     while True:
@@ -70,8 +71,9 @@ def process_client():
         else:
             print("Получен запрос на соединение с %s" % str(addr))
             clients.append(connect)
+            
         finally:
-            wait = 10
+            wait = 1
             r = []
             w = []
             try:
@@ -82,6 +84,11 @@ def process_client():
             requests = read_requests(r, clients)
             if requests:
                 write_responses(requests, w, clients)
+
+
+
+
+
 
 # @Logging()
 # def process_message():

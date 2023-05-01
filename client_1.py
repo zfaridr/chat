@@ -4,6 +4,8 @@ import sys
 import logging
 import log.client_log_config
 import inspect
+import threading
+import time
 
 chat_log = logging.getLogger('app.chat')
 
@@ -23,7 +25,18 @@ class Logging():
 adress = ('localhost', 8668)
 
 @Logging()
-def message_to_server():
+def message_from_server(sock, user_name):
+    with socket(AF_INET, SOCK_STREAM) as s: 
+        s.connect(adress)
+        while True:
+            message = s.recv(1024).decode('utf-8')
+            print('Message from server: ', message)
+              
+
+
+@Logging()
+def interact_with_server():
+    user = input('Input user name: ')
     with socket(AF_INET, SOCK_STREAM) as s: 
         s.connect(adress)
         while True:
@@ -33,6 +46,11 @@ def message_to_server():
             s.send(message.encode('utf-8'))
             # data = s.recv(1024).decode('utf-8')
             # print('Response from server:', data)
+            time.sleep(5)
+            receiver = threading.Thread(target=message_from_server, args=(s, user))
+            receiver.daemon = True
+            receiver.start()
+    
 
 if __name__ == '__main__':
-    message_to_server()
+    interact_with_server()
