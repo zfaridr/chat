@@ -4,7 +4,11 @@ import time
 import json
 import logging
 import log.server_log_config
-import inspect
+import subprocess
+
+p1 = subprocess.Popen("ls -l", shell=True, stdout=subprocess.PIPE)
+p2 = subprocess.Popen("wc", shell=True, stdin=p1.stdout, stdout=subprocess.PIPE)
+out = p2.stdout.read()
 
 chat_log = logging.getLogger('app.chat')
 
@@ -84,36 +88,7 @@ def process_client():
             requests = read_requests(r, clients)
             if requests:
                 write_responses(requests, w, clients)
-
-
-
-
-
-
-# @Logging()
-# def process_message():
-#     client, addr = s.accept()
-#     data_client = client.recv(1000000)
-#     data_decode = data_client.decode('utf-8')
-#     data = json.loads(data_decode)
-#     if data['action'] == 'presence':
-#         data_to_send = 'You are online'
-#         client.send(json.dumps(data_to_send).encode('utf-8'))
-#     elif data['action'] == 'join':
-#         data_to_send = 'You are in the chat'
-#         client.send(json.dumps(data_to_send).encode('utf-8'))
-#     elif data['action'] == 'msg':
-#         data_to_send = 'Your message was recieved in the chat'
-#         client.send(json.dumps(data_to_send).encode('utf-8'))
-#         chat_log.info(data['message'])
-#     elif data['action'] == 'quit':
-#         data_to_send = 'Goodbye'
-#         client.send(json.dumps(data_to_send).encode('utf-8'))
-#         chat_log.info('Client leaved the chat')
-#         client.close()
-    
-#     return data_to_send
-              
+           
     
 if __name__ == "__main__":
     print('Server is working')
