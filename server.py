@@ -6,6 +6,85 @@ import logging
 import log.server_log_config
 import subprocess
 import dis
+import sys
+import sqlalchemy
+from sqlalchemy import Table, Column, Integer, String, MetaData, DateTime, create_engine
+import sqlite3
+from sqlalchemy.orm import mapper, sessionmaker
+from sqlalchemy.orm import registry
+
+engine = create_engine('sqlite:///:memory:', echo=True)
+Session = sessionmaker(bind=engine)
+
+
+metadata = MetaData()
+clients_table = Table('clients', metadata,
+    Column('login', String, primary_key=True),
+    Column('info', String),
+)
+
+clients_history = Table('clients_history', metadata,
+    Column('login_time', DateTime),
+    Column('ip_adress', String, primary_key=True),
+)
+
+contacts_list = Table('contacts_list', metadata,
+    Column('id', String, primary_key=True),
+    Column('client_id', String)
+)
+
+metadata.create_all(engine)
+
+class Client:
+    def __init__(self, login, info):
+        self.login = login
+        self.info = info
+    def __repr__(self):
+        return "<Client('%s','%s', '%s')>" % \
+        (self.login, self.info)
+
+m_client = registry.map_imperatively(Client, clients_table)
+print('Classic Mapping. Mapper: ', m_client)
+client_n = Client('timur', 'timur')
+
+
+class History:
+    def __init__(self, login_time, ip_adress):
+        self.login_time = login_time
+        self.ip_adress = ip_adress
+    def __repr__(self):
+        return "<History('%s','%s', '%s')>" % \
+        (self.login_time, self.ip_adress)
+
+m_history = registry.map_imperatively(History, clients_history)
+print('Classic Mapping. Mapper: ', m_history)
+
+class Contacts:
+    def __init__(self, id, client_id):
+        self.id = id
+        self.client_id = client_id
+    def __repr__(self):
+        return "<Contacts('%s','%s', '%s')>" % \
+        (self.id, self.client_id)
+
+m_contacts = registry.map_imperatively(Contacts, contacts_list)
+print('Classic Mapping. Mapper: ', m_contacts)
+
+
+
+session = Session()
+
+session.add(client_n)
+
+
+q_user = session.query(Client).filter_by(login='timur').first()
+print('Simple query:', q_user)
+
+session.add_all([Client('ivan', 'simply ivan'),
+Client('fast', 'very fast')])
+
+session.commit()
+print('Client login after commit:', client_n.login)
 
 p1 = subprocess.Popen("ls -l", shell=True, stdout=subprocess.PIPE)
 p2 = subprocess.Popen("wc", shell=True, stdin=p1.stdout, stdout=subprocess.PIPE)
