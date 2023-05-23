@@ -6,6 +6,30 @@ import log.client_log_config
 import threading
 import time
 import subprocess
+import dis
+
+
+
+class ClientVer(type):
+    def __init__(self, clsname, bases, clsdict):
+        clsmethods = []
+        for func in clsdict:
+            # Пробуем
+            try:
+                ret = dis.get_instructions(clsdict[func])
+                # Если не функция то ловим исключение
+            except TypeError:
+                pass
+            else:
+                for i in ret:
+                    if i.opname == 'LOAD_GLOBAL':
+                        if i.argval not in clsmethods:
+                            clsmethods.append(i.argval)
+        for command in ('accept', 'listen', 'socket'):
+            if command in clsmethods:
+                raise TypeError('method is not allowed')
+       
+        super().__init__(clsname, bases, clsdict)
 
 chat_log = logging.getLogger('app.chat')
 
@@ -24,7 +48,7 @@ class Logging():
 
 adress = ('localhost', 8668)
 
-class Client():
+class Client(metaclass=ClientVer):
     def __init__(self, adress, user_name):
         self.adress = adress
         self.user_name = user_name
