@@ -1,4 +1,6 @@
 from socket import *
+import os
+import threading
 import select
 import time
 import json
@@ -12,83 +14,97 @@ from sqlalchemy import Table, Column, Integer, String, MetaData, DateTime, creat
 import sqlite3
 from sqlalchemy.orm import mapper, sessionmaker
 from sqlalchemy.orm import registry
+from dbase import ServerDataBase
+from PyQt5.QtWidgets import QApplication, QMessageBox
+from PyQt5.QtCore import QTimer
+from server_wind import MainWindow, gui_create_model, HistoryWindow, create_stat_model, ConfigWindow
+from PyQt5.QtGui import QStandardItemModel, QStandardItem
 
-engine = create_engine('sqlite:///:memory:', echo=True)
-Session = sessionmaker(bind=engine)
-
-
-metadata = MetaData()
-clients_table = Table('clients', metadata,
-    Column('login', String, primary_key=True),
-    Column('info', String),
-)
-
-clients_history = Table('clients_history', metadata,
-    Column('login_time', DateTime),
-    Column('ip_adress', String, primary_key=True),
-)
-
-contacts_list = Table('contacts_list', metadata,
-    Column('id', String, primary_key=True),
-    Column('client_id', String)
-)
-
-metadata.create_all(engine)
-
-class Client:
-    def __init__(self, login, info):
-        self.login = login
-        self.info = info
-    def __repr__(self):
-        return "<Client('%s','%s', '%s')>" % \
-        (self.login, self.info)
-
-m_client = registry.map_imperatively(Client, clients_table)
-print('Classic Mapping. Mapper: ', m_client)
-client_n = Client('timur', 'timur')
+# engine = create_engine('sqlite:///:memory:', echo=True)
+# Session = sessionmaker(bind=engine)
 
 
-class History:
-    def __init__(self, login_time, ip_adress):
-        self.login_time = login_time
-        self.ip_adress = ip_adress
-    def __repr__(self):
-        return "<History('%s','%s', '%s')>" % \
-        (self.login_time, self.ip_adress)
+# metadata = MetaData()
+# clients_table = Table('clients', metadata,
+#     Column('login', String, primary_key=True),
+#     Column('info', String),
+# )
 
-m_history = registry.map_imperatively(History, clients_history)
-print('Classic Mapping. Mapper: ', m_history)
+# clients_history = Table('clients_history', metadata,
+#     Column('login_time', DateTime),
+#     Column('ip_adress', String, primary_key=True),
+# )
 
-class Contacts:
-    def __init__(self, id, client_id):
-        self.id = id
-        self.client_id = client_id
-    def __repr__(self):
-        return "<Contacts('%s','%s', '%s')>" % \
-        (self.id, self.client_id)
+# contacts_list = Table('contacts_list', metadata,
+#     Column('id', String, primary_key=True),
+#     Column('client_id', String)
+# )
 
-m_contacts = registry.map_imperatively(Contacts, contacts_list)
-print('Classic Mapping. Mapper: ', m_contacts)
+# metadata.create_all(engine)
+
+# class Client:
+#     def __init__(self, login, info):
+#         self.login = login
+#         self.info = info
+#     def __repr__(self):
+#         return "<Client('%s','%s', '%s')>" % \
+#         (self.login, self.info)
+
+# m_client = registry.map_imperatively(Client, clients_table)
+# print('Classic Mapping. Mapper: ', m_client)
+# client_n = Client('timur', 'timur')
 
 
+# class History:
+#     def __init__(self, login_time, ip_adress):
+#         self.login_time = login_time
+#         self.ip_adress = ip_adress
+#     def __repr__(self):
+#         return "<History('%s','%s', '%s')>" % \
+#         (self.login_time, self.ip_adress)
 
-session = Session()
+# m_history = registry.map_imperatively(History, clients_history)
+# print('Classic Mapping. Mapper: ', m_history)
 
-session.add(client_n)
+# class Contacts:
+#     def __init__(self, id, client_id):
+#         self.id = id
+#         self.client_id = client_id
+#     def __repr__(self):
+#         return "<Contacts('%s','%s', '%s')>" % \
+#         (self.id, self.client_id)
+
+# m_contacts = registry.map_imperatively(Contacts, contacts_list)
+# print('Classic Mapping. Mapper: ', m_contacts)
+
+# with sqlite3.connect('chat.db3') as conn:
+#     cursor = conn.cursor()
+    
+#     session = Session()
+
+#     session.add(client_n)
 
 
-q_user = session.query(Client).filter_by(login='timur').first()
-print('Simple query:', q_user)
+#     q_user = session.query(Client).filter_by(login='timur').first()
+#     print('Simple query:', q_user)
 
-session.add_all([Client('ivan', 'simply ivan'),
-Client('fast', 'very fast')])
+#     session.add_all([Client('ivan', 'simply ivan'),
+#     Client('fast', 'very fast')])
 
-session.commit()
-print('Client login after commit:', client_n.login)
+#     session.commit()
+#     print('Client login after commit:', client_n.login)
 
-p1 = subprocess.Popen("ls -l", shell=True, stdout=subprocess.PIPE)
-p2 = subprocess.Popen("wc", shell=True, stdin=p1.stdout, stdout=subprocess.PIPE)
-out = p2.stdout.read()
+#     z = cursor.fetchone()
+#     while z:
+#         print(z)
+#         z = cursor.fetchone()
+
+# conn.close()
+
+
+# p1 = subprocess.Popen("ls -l", shell=True, stdout=subprocess.PIPE)
+# p2 = subprocess.Popen("wc", shell=True, stdin=p1.stdout, stdout=subprocess.PIPE)
+# out = p2.stdout.read()
 
 
 
@@ -144,7 +160,7 @@ class Port:
         self.name = name
 
 
-class Server(metaclass=ServerVer):
+class Server(threading.Thread, metaclass=ServerVer):
     port = Port()
 
     @Logging()
@@ -212,11 +228,87 @@ class Server(metaclass=ServerVer):
                 if requests:
                     self.write_responses(requests, w, clients)
            
+def main():
+    dir_path = os.path.dirname(os.path.realpath(__file__))
     
+    
+
+    
+    database = ServerDataBase('chat.db3')
+        
+    server = Server(database)
+    server.daemon = True
+    server.start()
+
+    
+    server_app = QApplication(sys.argv)
+    main_window = MainWindow()
+
+    
+    main_window.statusBar().showMessage('Server Working')
+    main_window.active_clients_table.setModel(gui_create_model(database))
+    main_window.active_clients_table.resizeColumnsToContents()
+    main_window.active_clients_table.resizeRowsToContents()
+
+    def list_update():
+        global new_connection
+        if new_connection:
+            main_window.active_clients_table.setModel(
+                gui_create_model(database))
+            main_window.active_clients_table.resizeColumnsToContents()
+            main_window.active_clients_table.resizeRowsToContents()
+            
+
+    def show_statistics():
+        global stat_window
+        stat_window = HistoryWindow()
+        stat_window.history_table.setModel(create_stat_model(database))
+        stat_window.history_table.resizeColumnsToContents()
+        stat_window.history_table.resizeRowsToContents()
+        stat_window.show()
+
+    
+    def server_config():
+        global config_window
+        # Создаём окно и заносим в него текущие параметры
+        config_window = ConfigWindow()
+        config_window.save_btn.clicked.connect(save_server_config)
+
+    # Функция сохранения настроек
+    def save_server_config():
+        global config_window
+        message = QMessageBox()
+        try:
+            port = int(config_window.port.text())
+        except ValueError:
+            message.warning(config_window, 'Ошибка', 'Порт должен быть числом')
+        else:
+            if 1023 < port < 65536:
+                print(port)
+                with open('server.ini', 'w') as conf:
+                    message.information(
+                        config_window, 'OK', 'Настройки успешно сохранены!')
+            else:
+                message.warning(
+                    config_window,
+                    'Ошибка',
+                    'Порт должен быть от 1024 до 65536')
+
+    
+    timer = QTimer()
+    timer.timeout.connect(list_update)
+    timer.start(1000)
+
+    
+    main_window.refresh_button.triggered.connect(list_update)
+    main_window.show_history_button.triggered.connect(show_statistics)
+    main_window.config_btn.triggered.connect(server_config)
+
+    
+    server_app.exec_()
+
 if __name__ == "__main__":
-    print('Server is working')
-    new_server=Server()
-    new_server.process_client()
+    main()
 
     
 
