@@ -16354,3 +16354,290 @@ CREATE TABLE contacts_list (
 
 2023-05-23 20:04:21,077 INFO base.py [no key 0.00329s] ()
 2023-05-23 20:04:21,078 INFO base.py COMMIT
+2023-05-25 17:08:01,732 INFO base.py BEGIN (implicit)
+2023-05-25 17:08:01,733 INFO base.py PRAGMA main.table_info("clients")
+2023-05-25 17:08:01,739 INFO base.py [raw sql] ()
+2023-05-25 17:08:01,746 INFO base.py PRAGMA temp.table_info("clients")
+2023-05-25 17:08:01,747 INFO base.py [raw sql] ()
+2023-05-25 17:08:01,748 INFO base.py PRAGMA main.table_info("clients_history")
+2023-05-25 17:08:01,749 INFO base.py [raw sql] ()
+2023-05-25 17:08:01,750 INFO base.py PRAGMA temp.table_info("clients_history")
+2023-05-25 17:08:01,750 INFO base.py [raw sql] ()
+2023-05-25 17:08:01,756 INFO base.py PRAGMA main.table_info("contacts_list")
+2023-05-25 17:08:01,758 INFO base.py [raw sql] ()
+2023-05-25 17:08:01,759 INFO base.py PRAGMA temp.table_info("contacts_list")
+2023-05-25 17:08:01,760 INFO base.py [raw sql] ()
+2023-05-25 17:08:01,761 INFO base.py 
+CREATE TABLE clients (
+	login VARCHAR NOT NULL, 
+	info VARCHAR, 
+	PRIMARY KEY (login)
+)
+
+
+2023-05-25 17:08:01,769 INFO base.py [no key 0.00811s] ()
+2023-05-25 17:08:01,771 INFO base.py 
+CREATE TABLE clients_history (
+	login_time DATETIME, 
+	ip_adress VARCHAR NOT NULL, 
+	PRIMARY KEY (ip_adress)
+)
+
+
+2023-05-25 17:08:01,778 INFO base.py [no key 0.00710s] ()
+2023-05-25 17:08:01,780 INFO base.py 
+CREATE TABLE contacts_list (
+	id VARCHAR NOT NULL, 
+	client_id VARCHAR, 
+	PRIMARY KEY (id)
+)
+
+
+2023-05-25 17:08:01,784 INFO base.py [no key 0.00363s] ()
+2023-05-25 17:08:01,785 INFO base.py COMMIT
+2023-05-25 17:08:52,659 INFO base.py BEGIN (implicit)
+2023-05-25 17:08:52,661 INFO base.py PRAGMA main.table_info("clients")
+2023-05-25 17:08:52,666 INFO base.py [raw sql] ()
+2023-05-25 17:08:52,667 INFO base.py PRAGMA temp.table_info("clients")
+2023-05-25 17:08:52,674 INFO base.py [raw sql] ()
+2023-05-25 17:08:52,675 INFO base.py PRAGMA main.table_info("clients_history")
+2023-05-25 17:08:52,675 INFO base.py [raw sql] ()
+2023-05-25 17:08:52,676 INFO base.py PRAGMA temp.table_info("clients_history")
+2023-05-25 17:08:52,677 INFO base.py [raw sql] ()
+2023-05-25 17:08:52,678 INFO base.py PRAGMA main.table_info("contacts_list")
+2023-05-25 17:08:52,679 INFO base.py [raw sql] ()
+2023-05-25 17:08:52,680 INFO base.py PRAGMA temp.table_info("contacts_list")
+2023-05-25 17:08:52,681 INFO base.py [raw sql] ()
+2023-05-25 17:08:52,682 INFO base.py 
+CREATE TABLE clients (
+	login VARCHAR NOT NULL, 
+	info VARCHAR, 
+	PRIMARY KEY (login)
+)
+
+
+2023-05-25 17:08:52,686 INFO base.py [no key 0.00384s] ()
+2023-05-25 17:08:52,688 INFO base.py 
+CREATE TABLE clients_history (
+	login_time DATETIME, 
+	ip_adress VARCHAR NOT NULL, 
+	PRIMARY KEY (ip_adress)
+)
+
+
+2023-05-25 17:08:52,692 INFO base.py [no key 0.00488s] ()
+2023-05-25 17:08:52,694 INFO base.py 
+CREATE TABLE contacts_list (
+	id VARCHAR NOT NULL, 
+	client_id VARCHAR, 
+	PRIMARY KEY (id)
+)
+
+
+2023-05-25 17:08:52,699 INFO base.py [no key 0.00530s] ()
+2023-05-25 17:08:52,700 INFO base.py COMMIT
+2023-05-25 17:09:26,481 INFO base.py BEGIN (implicit)
+2023-05-25 17:09:26,483 INFO base.py PRAGMA main.table_info("clients")
+2023-05-25 17:09:26,493 INFO base.py [raw sql] ()
+2023-05-25 17:09:26,496 INFO base.py PRAGMA temp.table_info("clients")
+2023-05-25 17:09:26,508 INFO base.py [raw sql] ()
+2023-05-25 17:09:26,511 INFO base.py PRAGMA main.table_info("clients_history")
+2023-05-25 17:09:26,515 INFO base.py [raw sql] ()
+2023-05-25 17:09:26,516 INFO base.py PRAGMA temp.table_info("clients_history")
+2023-05-25 17:09:26,518 INFO base.py [raw sql] ()
+2023-05-25 17:09:26,519 INFO base.py PRAGMA main.table_info("contacts_list")
+2023-05-25 17:09:26,521 INFO base.py [raw sql] ()
+2023-05-25 17:09:26,529 INFO base.py PRAGMA temp.table_info("contacts_list")
+2023-05-25 17:09:26,532 INFO base.py [raw sql] ()
+2023-05-25 17:09:26,537 INFO base.py 
+CREATE TABLE clients (
+	login VARCHAR NOT NULL, 
+	info VARCHAR, 
+	PRIMARY KEY (login)
+)
+
+
+2023-05-25 17:09:26,552 INFO base.py [no key 0.01516s] ()
+2023-05-25 17:09:26,553 INFO base.py 
+CREATE TABLE clients_history (
+	login_time DATETIME, 
+	ip_adress VARCHAR NOT NULL, 
+	PRIMARY KEY (ip_adress)
+)
+
+
+2023-05-25 17:09:26,581 INFO base.py [no key 0.02817s] ()
+2023-05-25 17:09:26,589 INFO base.py 
+CREATE TABLE contacts_list (
+	id VARCHAR NOT NULL, 
+	client_id VARCHAR, 
+	PRIMARY KEY (id)
+)
+
+
+2023-05-25 17:09:26,594 INFO base.py [no key 0.00476s] ()
+2023-05-25 17:09:26,597 INFO base.py COMMIT
+2023-05-25 17:10:00,415 INFO base.py BEGIN (implicit)
+2023-05-25 17:10:00,417 INFO base.py PRAGMA main.table_info("clients")
+2023-05-25 17:10:00,422 INFO base.py [raw sql] ()
+2023-05-25 17:10:00,423 INFO base.py PRAGMA temp.table_info("clients")
+2023-05-25 17:10:00,424 INFO base.py [raw sql] ()
+2023-05-25 17:10:00,424 INFO base.py PRAGMA main.table_info("clients_history")
+2023-05-25 17:10:00,429 INFO base.py [raw sql] ()
+2023-05-25 17:10:00,430 INFO base.py PRAGMA temp.table_info("clients_history")
+2023-05-25 17:10:00,430 INFO base.py [raw sql] ()
+2023-05-25 17:10:00,434 INFO base.py PRAGMA main.table_info("contacts_list")
+2023-05-25 17:10:00,436 INFO base.py [raw sql] ()
+2023-05-25 17:10:00,436 INFO base.py PRAGMA temp.table_info("contacts_list")
+2023-05-25 17:10:00,437 INFO base.py [raw sql] ()
+2023-05-25 17:10:00,438 INFO base.py 
+CREATE TABLE clients (
+	login VARCHAR NOT NULL, 
+	info VARCHAR, 
+	PRIMARY KEY (login)
+)
+
+
+2023-05-25 17:10:00,442 INFO base.py [no key 0.00410s] ()
+2023-05-25 17:10:00,444 INFO base.py 
+CREATE TABLE clients_history (
+	login_time DATETIME, 
+	ip_adress VARCHAR NOT NULL, 
+	PRIMARY KEY (ip_adress)
+)
+
+
+2023-05-25 17:10:00,447 INFO base.py [no key 0.00333s] ()
+2023-05-25 17:10:00,448 INFO base.py 
+CREATE TABLE contacts_list (
+	id VARCHAR NOT NULL, 
+	client_id VARCHAR, 
+	PRIMARY KEY (id)
+)
+
+
+2023-05-25 17:10:00,451 INFO base.py [no key 0.00306s] ()
+2023-05-25 17:10:00,451 INFO base.py COMMIT
+2023-05-25 17:12:15,504 INFO base.py BEGIN (implicit)
+2023-05-25 17:12:15,506 INFO base.py PRAGMA main.table_info("clients")
+2023-05-25 17:12:15,511 INFO base.py [raw sql] ()
+2023-05-25 17:12:15,512 INFO base.py PRAGMA temp.table_info("clients")
+2023-05-25 17:12:15,518 INFO base.py [raw sql] ()
+2023-05-25 17:12:15,519 INFO base.py PRAGMA main.table_info("clients_history")
+2023-05-25 17:12:15,519 INFO base.py [raw sql] ()
+2023-05-25 17:12:15,520 INFO base.py PRAGMA temp.table_info("clients_history")
+2023-05-25 17:12:15,521 INFO base.py [raw sql] ()
+2023-05-25 17:12:15,521 INFO base.py PRAGMA main.table_info("contacts_list")
+2023-05-25 17:12:15,522 INFO base.py [raw sql] ()
+2023-05-25 17:12:15,523 INFO base.py PRAGMA temp.table_info("contacts_list")
+2023-05-25 17:12:15,524 INFO base.py [raw sql] ()
+2023-05-25 17:12:15,526 INFO base.py 
+CREATE TABLE clients (
+	login VARCHAR NOT NULL, 
+	info VARCHAR, 
+	PRIMARY KEY (login)
+)
+
+
+2023-05-25 17:12:15,529 INFO base.py [no key 0.00466s] ()
+2023-05-25 17:12:15,530 INFO base.py 
+CREATE TABLE clients_history (
+	login_time DATETIME, 
+	ip_adress VARCHAR NOT NULL, 
+	PRIMARY KEY (ip_adress)
+)
+
+
+2023-05-25 17:12:15,537 INFO base.py [no key 0.00712s] ()
+2023-05-25 17:12:15,539 INFO base.py 
+CREATE TABLE contacts_list (
+	id VARCHAR NOT NULL, 
+	client_id VARCHAR, 
+	PRIMARY KEY (id)
+)
+
+
+2023-05-25 17:12:15,542 INFO base.py [no key 0.00332s] ()
+2023-05-25 17:12:15,543 INFO base.py COMMIT
+2023-05-25 17:13:57,709 INFO base.py BEGIN (implicit)
+2023-05-25 17:13:57,710 INFO base.py PRAGMA main.table_info("clients")
+2023-05-25 17:13:57,715 INFO base.py [raw sql] ()
+2023-05-25 17:13:57,717 INFO base.py PRAGMA temp.table_info("clients")
+2023-05-25 17:13:57,723 INFO base.py [raw sql] ()
+2023-05-25 17:13:57,724 INFO base.py PRAGMA main.table_info("clients_history")
+2023-05-25 17:13:57,725 INFO base.py [raw sql] ()
+2023-05-25 17:13:57,726 INFO base.py PRAGMA temp.table_info("clients_history")
+2023-05-25 17:13:57,727 INFO base.py [raw sql] ()
+2023-05-25 17:13:57,727 INFO base.py PRAGMA main.table_info("contacts_list")
+2023-05-25 17:13:57,729 INFO base.py [raw sql] ()
+2023-05-25 17:13:57,730 INFO base.py PRAGMA temp.table_info("contacts_list")
+2023-05-25 17:13:57,730 INFO base.py [raw sql] ()
+2023-05-25 17:13:57,731 INFO base.py 
+CREATE TABLE clients (
+	login VARCHAR NOT NULL, 
+	info VARCHAR, 
+	PRIMARY KEY (login)
+)
+
+
+2023-05-25 17:13:57,734 INFO base.py [no key 0.00315s] ()
+2023-05-25 17:13:57,736 INFO base.py 
+CREATE TABLE clients_history (
+	login_time DATETIME, 
+	ip_adress VARCHAR NOT NULL, 
+	PRIMARY KEY (ip_adress)
+)
+
+
+2023-05-25 17:13:57,738 INFO base.py [no key 0.00282s] ()
+2023-05-25 17:13:57,740 INFO base.py 
+CREATE TABLE contacts_list (
+	id VARCHAR NOT NULL, 
+	client_id VARCHAR, 
+	PRIMARY KEY (id)
+)
+
+
+2023-05-25 17:13:57,743 INFO base.py [no key 0.00349s] ()
+2023-05-25 17:13:57,744 INFO base.py COMMIT
+2023-05-25 17:19:38,832 INFO base.py BEGIN (implicit)
+2023-05-25 17:19:38,834 INFO base.py PRAGMA main.table_info("clients")
+2023-05-25 17:19:38,856 INFO base.py [raw sql] ()
+2023-05-25 17:19:38,858 INFO base.py PRAGMA temp.table_info("clients")
+2023-05-25 17:19:38,860 INFO base.py [raw sql] ()
+2023-05-25 17:19:38,861 INFO base.py PRAGMA main.table_info("clients_history")
+2023-05-25 17:19:38,862 INFO base.py [raw sql] ()
+2023-05-25 17:19:38,863 INFO base.py PRAGMA temp.table_info("clients_history")
+2023-05-25 17:19:38,863 INFO base.py [raw sql] ()
+2023-05-25 17:19:38,864 INFO base.py PRAGMA main.table_info("contacts_list")
+2023-05-25 17:19:38,869 INFO base.py [raw sql] ()
+2023-05-25 17:19:38,870 INFO base.py PRAGMA temp.table_info("contacts_list")
+2023-05-25 17:19:38,870 INFO base.py [raw sql] ()
+2023-05-25 17:19:38,872 INFO base.py 
+CREATE TABLE clients (
+	login VARCHAR NOT NULL, 
+	info VARCHAR, 
+	PRIMARY KEY (login)
+)
+
+
+2023-05-25 17:19:38,881 INFO base.py [no key 0.00873s] ()
+2023-05-25 17:19:38,882 INFO base.py 
+CREATE TABLE clients_history (
+	login_time DATETIME, 
+	ip_adress VARCHAR NOT NULL, 
+	PRIMARY KEY (ip_adress)
+)
+
+
+2023-05-25 17:19:38,887 INFO base.py [no key 0.00459s] ()
+2023-05-25 17:19:38,888 INFO base.py 
+CREATE TABLE contacts_list (
+	id VARCHAR NOT NULL, 
+	client_id VARCHAR, 
+	PRIMARY KEY (id)
+)
+
+
+2023-05-25 17:19:38,902 INFO base.py [no key 0.01392s] ()
+2023-05-25 17:19:38,903 INFO base.py COMMIT
