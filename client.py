@@ -4,7 +4,7 @@ import json
 import threading
 from PyQt5.QtCore import pyqtSignal, QObject
 from sqlalchemy import create_engine, Table, Column, Integer, String, Text, MetaData, DateTime
-from sqlalchemy.orm import mapper, sessionmaker
+from sqlalchemy.orm import mapper, sessionmaker, registry
 import datetime
 import logging
 import logging.handlers
@@ -18,6 +18,10 @@ from PyQt5.QtCore import pyqtSlot, QEvent, Qt
 from PyQt5.QtWidgets import QDialog, QLabel, QComboBox, QPushButton, QApplication
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QDialog, QPushButton, QLineEdit, QApplication, QLabel
+from Crypto.PublicKey import RSA
+import hashlib
+import hmac
+import binascii
 
 sys.path.append('../')
 
@@ -47,7 +51,13 @@ LIST_INFO = 'data_list'
 REMOVE_CONTACT = 'remove'
 ADD_CONTACT = 'add'
 USERS_REQUEST = 'get_users'
+PUBLIC_KEY = 'pubkey'
+DATA = 'bin'
 
+RESPONSE_511 = {
+    RESPONSE: 511,
+    DATA: None
+}
 
 RESPONSE_200 = {RESPONSE: 200}
 
@@ -164,7 +174,7 @@ class ClientDatabase:
             self.id = None
             self.username = user
 
-    class MessageHistory:
+    class MessageStat:
         def __init__(self, contact, direction, message):
             self.id = None
             self.contact = contact
@@ -180,15 +190,106 @@ class ClientDatabase:
     def __init__(self, name):
         path = os.path.dirname(os.path.realpath(__file__))
         filename = f'client_{name}.db3'
-        self.database_engine = create_engine(f'sqlite:///{os.path.join(path, filename)}', echo=False, pool_recycle=7200,
-                                             connect_args={'check_same_thread': False})
+        self.database_engine = create_engine(
+            f'sqlite:///{os.path.join(path, filename)}',
+            echo=False,
+            pool_recycle=7200,
+            connect_args={
+                'check_same_thread': False})
 
+        mapper_reg = registry()
         self.metadata = MetaData()
 
-        users = Table('known_users', self.metadata,
+        users = Table('known_users', mapper_reg.metadata,
                       Column('id', Integer, primary_key=True),
                       Column('username', String)
                       )
+
+        history = Table('message_history', mapper_reg.metadata,
+                        Column('id', Integer, primary_key=True),
+                        Column('contact', String),
+                        Column('direction', String),
+                        Column('message', Text),
+                        Column('date', DateTime)
+                        )
+
+        
+        contacts = Table('contacts', mapper_reg.metadata,
+                         Column('id', Integer, primary_key=True),
+                         Column('name', String, unique=True)
+                         )
+
+        
+        self.metadata.create_all(self.database_engine)
+
+        
+        mapper_reg.map_imperatively(self.KnownUsers, users)
+        mapper_reg.map_imperatively(self.MessageStat, history)
+        mapper_reg.map_imperatively(self.Contacts, contacts)
+
+        
+        Session = sessionmaker(bind=self.database_engine)
+        self.session = Session()
+
+        self.session.query(self.Contacts).delete()
+        self.session.commit()
+
+    def add_contact(self, contact):
+        if not self.session.query(
+                self.Contacts).filter_by(
+                name=contact).count():
+            contact_row = self.Contacts(contact)
+            self.session.add(contact_row)
+            self.session.commit()
+
+    def contacts_clear(self):
+        self.session.query(self.Contacts).delete()
+
+    def del_contact(self, contact):
+        self.session.query(self.Contacts).filter_by(name=contact).delete()
+
+    def add_users(self, users_list):
+        self.session.query(self.KnownUsers).delete()
+        for user in users_list:
+            user_row = self.KnownUsers(user)
+            self.session.add(user_row)
+        self.session.commit()
+
+    def save_message(self, contact, direction, message):
+        message_row = self.MessageStat(contact, direction, message)
+        self.session.add(message_row)
+        self.session.commit()
+
+    def get_contacts(self):
+        return [contact[0]
+                for contact in self.session.query(self.Contacts.name).all()]
+
+    def get_users(self):
+        return [user[0]
+                for user in self.session.query(self.KnownUsers.username).all()]
+
+    def check_user(self, user):
+        if self.session.query(
+                self.KnownUsers).filter_by(
+                username=user).count():
+            return True
+        else:
+            return False
+
+    def check_contact(self, contact):
+        if self.session.query(self.Contacts).filter_by(name=contact).count():
+            return True
+        else:
+            return False
+
+    def get_history(self, contact):
+        query = self.session.query(
+            self.MessageStat).filter_by(
+            contact=contact)
+        return [(history_row.contact,
+                 history_row.direction,
+                 history_row.message,
+                 history_row.date) for history_row in query.all()]
 
 
 
@@ -198,15 +299,18 @@ socket_lock = threading.Lock()
 
 class ClientTransport(threading.Thread, QObject):
     new_message = pyqtSignal(str)
+    message_205 = pyqtSignal()
     connection_lost = pyqtSignal()
 
-    def __init__(self, port, ip_address, database, username):
+    def __init__(self, port, ip_address, database, username, passwd, keys):
         threading.Thread.__init__(self)
         QObject.__init__(self)
 
         self.database = database
         self.username = username
+        self.password = passwd
         self.transport = None
+        self.keys = keys
         self.connection_init(port, ip_address)
         try:
             self.user_list_update()
@@ -247,29 +351,46 @@ class ClientTransport(threading.Thread, QObject):
 
         logger.debug('Установлено соединение с сервером')
 
-        
-        try:
-            with socket_lock:
-                send_message(self.transport, self.create_presence())
-                self.process_server_ans(get_message(self.transport))
-        except (OSError, json.JSONDecodeError):
-            logger.critical('Потеряно соединение с сервером!')
-            raise ServerError('Потеряно соединение с сервером!')
+        passwd_bytes = self.password.encode('utf-8')
+        salt = self.username.lower().encode('utf-8')
+        passwd_hash = hashlib.pbkdf2_hmac('sha512', passwd_bytes, salt, 10000)
+        passwd_hash_string = binascii.hexlify(passwd_hash)
+
+        logger.debug(f'Passwd hash ready: {passwd_hash_string}')
+
+        pubkey = self.keys.publickey().export_key().decode('ascii')
 
         
-        logger.info('Соединение с сервером успешно установлено.')
-
-    
-    def create_presence(self):
-        out = {
-            ACTION: PRESENCE,
-            TIME: time.time(),
-            USER: {
-                ACCOUNT_NAME: self.username
+        with socket_lock:
+            presense = {
+                ACTION: PRESENCE,
+                TIME: time.time(),
+                USER: {
+                    ACCOUNT_NAME: self.username,
+                    PUBLIC_KEY: pubkey
+                }
             }
-        }
-        logger.debug(f'Сформировано {PRESENCE} сообщение для пользователя {self.username}')
-        return out
+            logger.debug(f"Presense message = {presense}")
+            try:
+                send_message(self.transport, presense)
+                ans = get_message(self.transport)
+                logger.debug(f'Server response = {ans}.')
+                if RESPONSE in ans:
+                    if ans[RESPONSE] == 400:
+                        raise ServerError(ans[ERROR])
+                    elif ans[RESPONSE] == 511:
+                        ans_data = ans[DATA]
+                        hash = hmac.new(passwd_hash_string, ans_data.encode('utf-8'), 'MD5')
+                        digest = hash.digest()
+                        my_ans = RESPONSE_511
+                        my_ans[DATA] = binascii.b2a_base64(
+                            digest).decode('ascii')
+                        send_message(self.transport, my_ans)
+                        self.process_server_ans(get_message(self.transport))
+            except (OSError, json.JSONDecodeError) as err:
+                logger.debug(f'Connection error.', exc_info=err)
+                raise ServerError('Сбой соединения в процессе авторизации.')
+        
 
     
     def process_server_ans(self, message):
@@ -280,6 +401,10 @@ class ClientTransport(threading.Thread, QObject):
                 return
             elif message[RESPONSE] == 400:
                 raise ServerError(f'{message[ERROR]}')
+            elif message[RESPONSE] == 205:
+                self.user_list_update()
+                self.contacts_list_update()
+                self.message_205.emit()
             else:
                 logger.debug(f'Принят неизвестный код подтверждения {message[RESPONSE]}')
 
@@ -293,6 +418,7 @@ class ClientTransport(threading.Thread, QObject):
 
     
     def contacts_list_update(self):
+        self.database.contacts_clear()
         logger.debug(f'Запрос контакт листа для пользователся {self.name}')
         req = {
             ACTION: GET_CONTACTS,
@@ -326,6 +452,20 @@ class ClientTransport(threading.Thread, QObject):
         else:
             logger.error('Не удалось обновить список известных пользователей.')
 
+    def key_request(self, user):
+        logger.debug(f'Запрос публичного ключа для {user}')
+        req = {
+            ACTION: PUBLIC_KEY_REQUEST,
+            TIME: time.time(),
+            ACCOUNT_NAME: user
+        }
+        with socket_lock:
+            send_message(self.transport, req)
+            ans = get_message(self.transport)
+        if RESPONSE in ans and ans[RESPONSE] == 511:
+            return ans[DATA]
+        else:
+            logger.error(f'Не удалось получить ключ собеседника{user}.')
     
     def add_contact(self, contact):
         logger.debug(f'Создание контакта {contact}')
@@ -593,7 +733,6 @@ class DelContactDialog(QDialog):
 
 
 
-# Стартовый диалог с выбором имени пользователя
 class UserNameDialog(QDialog):
     def __init__(self):
         super().__init__()
@@ -619,9 +758,18 @@ class UserNameDialog(QDialog):
         self.btn_cancel.move(90, 60)
         self.btn_cancel.clicked.connect(qApp.exit)
 
+        self.label_passwd = QLabel('Введите пароль:', self)
+        self.label_passwd.move(10, 55)
+        self.label_passwd.setFixedSize(150, 15)
+
+        self.client_passwd = QLineEdit(self)
+        self.client_passwd.setFixedSize(154, 20)
+        self.client_passwd.move(10, 75)
+        self.client_passwd.setEchoMode(QLineEdit.Password)
+
         self.show()
 
-    # Обработчик кнопки ОК, если поле вводе не пустое, ставим флаг и завершаем приложение.
+        
     def click(self):
         if self.client_name.text():
             self.ok_pressed = True
@@ -844,32 +992,35 @@ def arg_parser():
     parser.add_argument('addr', default=DEFAULT_IP_ADDRESS, nargs='?')
     parser.add_argument('port', default=DEFAULT_PORT, type=int, nargs='?')
     parser.add_argument('-n', '--name', default=None, nargs='?')
+    parser.add_argument('-p', '--password', default='', nargs='?')
     namespace = parser.parse_args(sys.argv[1:])
     server_address = namespace.addr
     server_port = namespace.port
     client_name = namespace.name
+    client_passwd = namespace.password
 
     if not 1023 < server_port < 65536:
         logger.critical(
             f'Попытка запуска клиента с неподходящим номером порта: {server_port}. Допустимы адреса с 1024 до 65535. Клиент завершается.')
         exit(1)
 
-    return server_address, server_port, client_name
+    return server_address, server_port, client_name, client_passwd
 
 
 
 if __name__ == '__main__':
-    server_address, server_port, client_name = arg_parser()
-
+    server_address, server_port, client_name, client_passwd = arg_parser()
+    logger.debug('Args loaded')
     client_app = QApplication(sys.argv)
 
     if not client_name:
         start_dialog = UserNameDialog()
         client_app.exec_()
-        # Если пользователь ввёл имя и нажал ОК, то сохраняем ведённое и удаляем объект, инааче выходим
+        
         if start_dialog.ok_pressed:
             client_name = start_dialog.client_name.text()
-            del start_dialog
+            client_passwd = start_dialog.client_passwd.text()
+            logger.debug(f'Using USERNAME = {client_name}, PASSWD = {client_passwd}.')
         else:
             exit(0)
 
@@ -877,23 +1028,38 @@ if __name__ == '__main__':
     logger.info(
         f'Запущен клиент с парамертами: адрес сервера: {server_address} , порт: {server_port}, имя пользователя: {client_name}')
 
-    
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    key_file = os.path.join(dir_path, f'{client_name}.key')
+    if not os.path.exists(key_file):
+        keys = RSA.generate(2048, os.urandom)
+        with open(key_file, 'wb') as key:
+            key.write(keys.export_key())
+    else:
+        with open(key_file, 'rb') as key:
+            keys = RSA.import_key(key.read())
+
+    logger.debug("Keys sucsessfully loaded.")
+       
     database = ClientDatabase(client_name)
 
     
     try:
-        transport = ClientTransport(server_port, server_address, database, client_name)
+        transport = ClientTransport(server_port, server_address, database, client_name, client_passwd, keys)
+        logger.debug("Transport ready.")
     except ServerError as error:
-        print(error.text)
+        message = QMessageBox()
+        message.critical(start_dialog, 'Ошибка сервера', error.text)
         exit(1)
     transport.setDaemon(True)
     transport.start()
 
+    del start_dialog
     
-    main_window = ClientMainWindow(database, transport)
+    main_window = ClientMainWindow(database, transport, keys)
     main_window.make_connection(transport)
     main_window.setWindowTitle(f'Чат Программа alpha release - {client_name}')
     client_app.exec_()
 
     
     transport.transport_shutdown()
+    transport.join()

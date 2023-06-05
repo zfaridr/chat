@@ -1,0 +1,376 @@
+2023-06-01 09:49:22,885 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-01 09:49:22,885 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-01 09:49:32,289 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: Farid
+2023-06-01 09:49:32,289 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: Farid
+2023-06-01 09:49:32,323 INFO client.py Попытка подключения №1
+2023-06-01 09:49:32,323 INFO client.py Попытка подключения №1
+2023-06-01 09:49:33,325 INFO client.py Попытка подключения №2
+2023-06-01 09:49:33,325 INFO client.py Попытка подключения №2
+2023-06-01 09:49:34,329 INFO client.py Попытка подключения №3
+2023-06-01 09:49:34,329 INFO client.py Попытка подключения №3
+2023-06-01 09:49:35,330 INFO client.py Попытка подключения №4
+2023-06-01 09:49:35,330 INFO client.py Попытка подключения №4
+2023-06-01 09:49:36,334 INFO client.py Попытка подключения №5
+2023-06-01 09:49:36,334 INFO client.py Попытка подключения №5
+2023-06-01 09:49:37,338 CRITICAL client.py Не удалось установить соединение с сервером
+2023-06-01 09:49:37,338 CRITICAL client.py Не удалось установить соединение с сервером
+2023-06-05 10:57:55,899 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 10:57:55,899 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 11:00:00,405 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 11:00:00,405 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 11:00:00,406 DEBUG client.py Args loaded
+2023-06-05 11:00:00,406 DEBUG client.py Args loaded
+2023-06-05 11:06:24,405 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 11:06:24,405 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 11:06:24,406 DEBUG client.py Args loaded
+2023-06-05 11:06:24,406 DEBUG client.py Args loaded
+2023-06-05 11:06:35,866 DEBUG client.py Using USERNAME = fjghf, PASSWD = kjfghf.
+2023-06-05 11:06:35,866 DEBUG client.py Using USERNAME = fjghf, PASSWD = kjfghf.
+2023-06-05 11:06:35,866 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: fjghf
+2023-06-05 11:06:35,866 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: fjghf
+2023-06-05 11:06:36,279 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 11:06:36,279 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 11:22:00,792 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 11:22:00,792 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 11:22:00,793 DEBUG client.py Args loaded
+2023-06-05 11:22:00,793 DEBUG client.py Args loaded
+2023-06-05 11:22:08,486 DEBUG client.py Using USERNAME = fg, PASSWD = fgh.
+2023-06-05 11:22:08,486 DEBUG client.py Using USERNAME = fg, PASSWD = fgh.
+2023-06-05 11:22:08,486 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: fg
+2023-06-05 11:22:08,486 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: fg
+2023-06-05 11:22:09,260 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 11:22:09,260 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 11:22:09,265 INFO client.py Попытка подключения №1
+2023-06-05 11:22:09,265 INFO client.py Попытка подключения №1
+2023-06-05 11:22:10,272 INFO client.py Попытка подключения №2
+2023-06-05 11:22:10,272 INFO client.py Попытка подключения №2
+2023-06-05 11:22:11,273 INFO client.py Попытка подключения №3
+2023-06-05 11:22:11,273 INFO client.py Попытка подключения №3
+2023-06-05 11:22:12,276 INFO client.py Попытка подключения №4
+2023-06-05 11:22:12,276 INFO client.py Попытка подключения №4
+2023-06-05 11:22:13,279 INFO client.py Попытка подключения №5
+2023-06-05 11:22:13,279 INFO client.py Попытка подключения №5
+2023-06-05 11:22:14,281 CRITICAL client.py Не удалось установить соединение с сервером
+2023-06-05 11:22:14,281 CRITICAL client.py Не удалось установить соединение с сервером
+2023-06-05 14:20:41,237 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:20:41,237 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:20:41,238 DEBUG client.py Args loaded
+2023-06-05 14:20:41,238 DEBUG client.py Args loaded
+2023-06-05 14:20:57,816 DEBUG client.py Using USERNAME = jhdgfjh, PASSWD = kjd.
+2023-06-05 14:20:57,816 DEBUG client.py Using USERNAME = jhdgfjh, PASSWD = kjd.
+2023-06-05 14:20:57,816 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: jhdgfjh
+2023-06-05 14:20:57,816 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: jhdgfjh
+2023-06-05 14:20:58,238 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:20:58,238 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:20:58,244 INFO client.py Попытка подключения №1
+2023-06-05 14:20:58,244 INFO client.py Попытка подключения №1
+2023-06-05 14:20:59,247 INFO client.py Попытка подключения №2
+2023-06-05 14:20:59,247 INFO client.py Попытка подключения №2
+2023-06-05 14:21:00,250 INFO client.py Попытка подключения №3
+2023-06-05 14:21:00,250 INFO client.py Попытка подключения №3
+2023-06-05 14:21:01,253 INFO client.py Попытка подключения №4
+2023-06-05 14:21:01,253 INFO client.py Попытка подключения №4
+2023-06-05 14:21:02,255 INFO client.py Попытка подключения №5
+2023-06-05 14:21:02,255 INFO client.py Попытка подключения №5
+2023-06-05 14:21:03,258 CRITICAL client.py Не удалось установить соединение с сервером
+2023-06-05 14:21:03,258 CRITICAL client.py Не удалось установить соединение с сервером
+2023-06-05 14:21:51,872 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:21:51,872 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:21:51,873 DEBUG client.py Args loaded
+2023-06-05 14:21:51,873 DEBUG client.py Args loaded
+2023-06-05 14:22:01,660 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:22:01,660 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:22:01,660 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:22:01,660 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:22:02,141 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:22:02,141 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:22:02,146 INFO client.py Попытка подключения №1
+2023-06-05 14:22:02,146 INFO client.py Попытка подключения №1
+2023-06-05 14:22:03,156 INFO client.py Попытка подключения №2
+2023-06-05 14:22:03,156 INFO client.py Попытка подключения №2
+2023-06-05 14:22:04,158 INFO client.py Попытка подключения №3
+2023-06-05 14:22:04,158 INFO client.py Попытка подключения №3
+2023-06-05 14:22:05,159 INFO client.py Попытка подключения №4
+2023-06-05 14:22:05,159 INFO client.py Попытка подключения №4
+2023-06-05 14:22:06,161 INFO client.py Попытка подключения №5
+2023-06-05 14:22:06,161 INFO client.py Попытка подключения №5
+2023-06-05 14:22:07,163 CRITICAL client.py Не удалось установить соединение с сервером
+2023-06-05 14:22:07,163 CRITICAL client.py Не удалось установить соединение с сервером
+2023-06-05 14:25:34,864 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:25:34,864 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:25:34,865 DEBUG client.py Args loaded
+2023-06-05 14:25:34,865 DEBUG client.py Args loaded
+2023-06-05 14:25:45,107 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:25:45,107 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:25:45,107 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:25:45,107 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:25:45,215 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:25:45,215 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:25:45,236 INFO client.py Попытка подключения №1
+2023-06-05 14:25:45,236 INFO client.py Попытка подключения №1
+2023-06-05 14:25:46,239 INFO client.py Попытка подключения №2
+2023-06-05 14:25:46,239 INFO client.py Попытка подключения №2
+2023-06-05 14:25:47,241 INFO client.py Попытка подключения №3
+2023-06-05 14:25:47,241 INFO client.py Попытка подключения №3
+2023-06-05 14:25:48,243 INFO client.py Попытка подключения №4
+2023-06-05 14:25:48,243 INFO client.py Попытка подключения №4
+2023-06-05 14:25:49,245 INFO client.py Попытка подключения №5
+2023-06-05 14:25:49,245 INFO client.py Попытка подключения №5
+2023-06-05 14:25:50,247 CRITICAL client.py Не удалось установить соединение с сервером
+2023-06-05 14:25:50,247 CRITICAL client.py Не удалось установить соединение с сервером
+2023-06-05 14:26:22,917 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:26:22,917 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:26:22,918 DEBUG client.py Args loaded
+2023-06-05 14:26:22,918 DEBUG client.py Args loaded
+2023-06-05 14:26:36,999 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:26:36,999 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:26:37,000 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:26:37,000 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:26:37,099 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:26:37,099 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:26:37,125 INFO client.py Попытка подключения №1
+2023-06-05 14:26:37,125 INFO client.py Попытка подключения №1
+2023-06-05 14:26:38,130 INFO client.py Попытка подключения №2
+2023-06-05 14:26:38,130 INFO client.py Попытка подключения №2
+2023-06-05 14:26:39,135 INFO client.py Попытка подключения №3
+2023-06-05 14:26:39,135 INFO client.py Попытка подключения №3
+2023-06-05 14:26:40,137 INFO client.py Попытка подключения №4
+2023-06-05 14:26:40,137 INFO client.py Попытка подключения №4
+2023-06-05 14:26:41,139 INFO client.py Попытка подключения №5
+2023-06-05 14:26:41,139 INFO client.py Попытка подключения №5
+2023-06-05 14:26:42,143 CRITICAL client.py Не удалось установить соединение с сервером
+2023-06-05 14:26:42,143 CRITICAL client.py Не удалось установить соединение с сервером
+2023-06-05 14:29:31,556 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:29:31,556 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:29:31,557 DEBUG client.py Args loaded
+2023-06-05 14:29:31,557 DEBUG client.py Args loaded
+2023-06-05 14:29:40,894 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:29:40,894 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:29:40,894 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:29:40,894 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:29:41,007 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:29:41,007 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:29:41,021 INFO client.py Попытка подключения №1
+2023-06-05 14:29:41,021 INFO client.py Попытка подключения №1
+2023-06-05 14:29:41,025 DEBUG client.py Установлено соединение с сервером
+2023-06-05 14:29:41,025 DEBUG client.py Установлено соединение с сервером
+2023-06-05 14:29:41,041 DEBUG client.py Passwd hash ready: b'e4ba5b471628ba50166158884e3f11c3efd54a2832fae84057770d7fbad208d82abf5e1bfed230c99394f9deee826a09687b7b1bddf5e0ffa7d9ac0107115f63'
+2023-06-05 14:29:41,041 DEBUG client.py Passwd hash ready: b'e4ba5b471628ba50166158884e3f11c3efd54a2832fae84057770d7fbad208d82abf5e1bfed230c99394f9deee826a09687b7b1bddf5e0ffa7d9ac0107115f63'
+2023-06-05 14:29:41,042 DEBUG client.py Presense message = {'action': 'presence', 'time': 1685964581.0424473, 'user': {'account_name': 'zfaridr', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwm0vJTkEz3Ff0HlzGX6v\n5ySK5e/TImvpEBRqvfe2BJTrTZE+j7HucYGSeTB1sGDZxTJi9g30h8/hy4HRUX0U\n+zuzx/EWpRWIMPC2qWpfOqr7Mn8rjnRNbnFgGjrbII4LD4OqhZfH6qhmvAtOB0Pe\nrrYDyftY7LzwT7/q6I/1BU5t2Wsq2eNLwIs2qKRWPkAXVqFFTNHzVcu5t4JyIPsw\ngyvGFtWfpku0LsOLRzbprTNBD6H2st7wIjkz9etAUtUuT8Xm0MX79pIppX5XaR0q\nJL4aN52JB3o0pq4qBywIL9swNRT5sGP3Nf6msTHwIQZZLeXAn926lMpZS/DvL2F6\n9wIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-06-05 14:29:41,042 DEBUG client.py Presense message = {'action': 'presence', 'time': 1685964581.0424473, 'user': {'account_name': 'zfaridr', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwm0vJTkEz3Ff0HlzGX6v\n5ySK5e/TImvpEBRqvfe2BJTrTZE+j7HucYGSeTB1sGDZxTJi9g30h8/hy4HRUX0U\n+zuzx/EWpRWIMPC2qWpfOqr7Mn8rjnRNbnFgGjrbII4LD4OqhZfH6qhmvAtOB0Pe\nrrYDyftY7LzwT7/q6I/1BU5t2Wsq2eNLwIs2qKRWPkAXVqFFTNHzVcu5t4JyIPsw\ngyvGFtWfpku0LsOLRzbprTNBD6H2st7wIjkz9etAUtUuT8Xm0MX79pIppX5XaR0q\nJL4aN52JB3o0pq4qBywIL9swNRT5sGP3Nf6msTHwIQZZLeXAn926lMpZS/DvL2F6\n9wIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-06-05 14:29:41,043 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53460), raddr=('127.0.0.1', 7788)>, {'action': 'presence', 'time': 1685964581.0424473, 'user': {'account_name': 'zfaridr', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwm0vJTkEz3Ff0HlzGX6v\n5ySK5e/TImvpEBRqvfe2BJTrTZE+j7HucYGSeTB1sGDZxTJi9g30h8/hy4HRUX0U\n+zuzx/EWpRWIMPC2qWpfOqr7Mn8rjnRNbnFgGjrbII4LD4OqhZfH6qhmvAtOB0Pe\nrrYDyftY7LzwT7/q6I/1BU5t2Wsq2eNLwIs2qKRWPkAXVqFFTNHzVcu5t4JyIPsw\ngyvGFtWfpku0LsOLRzbprTNBD6H2st7wIjkz9etAUtUuT8Xm0MX79pIppX5XaR0q\nJL4aN52JB3o0pq4qBywIL9swNRT5sGP3Nf6msTHwIQZZLeXAn926lMpZS/DvL2F6\n9wIDAQAB\n-----END PUBLIC KEY-----'}}) , {}. Вызов из модуля __main__
+2023-06-05 14:29:41,043 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53460), raddr=('127.0.0.1', 7788)>, {'action': 'presence', 'time': 1685964581.0424473, 'user': {'account_name': 'zfaridr', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwm0vJTkEz3Ff0HlzGX6v\n5ySK5e/TImvpEBRqvfe2BJTrTZE+j7HucYGSeTB1sGDZxTJi9g30h8/hy4HRUX0U\n+zuzx/EWpRWIMPC2qWpfOqr7Mn8rjnRNbnFgGjrbII4LD4OqhZfH6qhmvAtOB0Pe\nrrYDyftY7LzwT7/q6I/1BU5t2Wsq2eNLwIs2qKRWPkAXVqFFTNHzVcu5t4JyIPsw\ngyvGFtWfpku0LsOLRzbprTNBD6H2st7wIjkz9etAUtUuT8Xm0MX79pIppX5XaR0q\nJL4aN52JB3o0pq4qBywIL9swNRT5sGP3Nf6msTHwIQZZLeXAn926lMpZS/DvL2F6\n9wIDAQAB\n-----END PUBLIC KEY-----'}}) , {}. Вызов из модуля __main__
+2023-06-05 14:29:41,043 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53460), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 14:29:41,043 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53460), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 14:29:41,534 DEBUG client.py Server response = {'response': 511, 'bin': 'e828fef6dd86440854bc4ae0eafd2d80c6ff0e6ec9857b70a2c22c3bfad6814179b6e740f93642683628468236c96deae69438145c19300d650be0b59c6e5b04'}.
+2023-06-05 14:29:41,534 DEBUG client.py Server response = {'response': 511, 'bin': 'e828fef6dd86440854bc4ae0eafd2d80c6ff0e6ec9857b70a2c22c3bfad6814179b6e740f93642683628468236c96deae69438145c19300d650be0b59c6e5b04'}.
+2023-06-05 14:29:41,534 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53460), raddr=('127.0.0.1', 7788)>, {'response': 511, 'bin': 'oNYdT5PnHunzbRBpLRYZog==\n'}) , {}. Вызов из модуля __main__
+2023-06-05 14:29:41,534 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53460), raddr=('127.0.0.1', 7788)>, {'response': 511, 'bin': 'oNYdT5PnHunzbRBpLRYZog==\n'}) , {}. Вызов из модуля __main__
+2023-06-05 14:29:41,534 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53460), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 14:29:41,534 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53460), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 14:29:41,534 DEBUG client.py Разбор сообщения от сервера: {'response': 200}
+2023-06-05 14:29:41,534 DEBUG client.py Разбор сообщения от сервера: {'response': 200}
+2023-06-05 14:29:41,534 DEBUG client.py Запрос списка известных пользователей zfaridr
+2023-06-05 14:29:41,534 DEBUG client.py Запрос списка известных пользователей zfaridr
+2023-06-05 14:29:41,534 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53460), raddr=('127.0.0.1', 7788)>, {'action': 'get_users', 'time': 1685964581.534899, 'account_name': 'zfaridr'}) , {}. Вызов из модуля __main__
+2023-06-05 14:29:41,534 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53460), raddr=('127.0.0.1', 7788)>, {'action': 'get_users', 'time': 1685964581.534899, 'account_name': 'zfaridr'}) , {}. Вызов из модуля __main__
+2023-06-05 14:29:41,534 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53460), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 14:29:41,534 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=18, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53460), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 14:39:38,992 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:39:38,992 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:39:38,993 DEBUG client.py Args loaded
+2023-06-05 14:39:38,993 DEBUG client.py Args loaded
+2023-06-05 14:39:47,764 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:39:47,764 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:39:47,764 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:39:47,764 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:39:47,922 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:39:47,922 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:41:14,200 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:41:14,200 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:41:14,201 DEBUG client.py Args loaded
+2023-06-05 14:41:14,201 DEBUG client.py Args loaded
+2023-06-05 14:41:25,596 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:41:25,596 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:41:25,596 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:41:25,596 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:41:25,706 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:41:25,706 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:42:36,357 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:42:36,357 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:42:36,358 DEBUG client.py Args loaded
+2023-06-05 14:42:36,358 DEBUG client.py Args loaded
+2023-06-05 14:42:45,867 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:42:45,867 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:42:45,867 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:42:45,867 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:42:45,965 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:42:45,965 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:44:03,655 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:44:03,655 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:44:03,656 DEBUG client.py Args loaded
+2023-06-05 14:44:03,656 DEBUG client.py Args loaded
+2023-06-05 14:44:10,436 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:44:10,436 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:44:10,436 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:44:10,436 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:44:10,538 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:44:10,538 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:44:25,724 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:44:25,724 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:44:25,725 DEBUG client.py Args loaded
+2023-06-05 14:44:25,725 DEBUG client.py Args loaded
+2023-06-05 14:44:32,711 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:44:32,711 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:44:32,712 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:44:32,712 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:44:32,831 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:44:32,831 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:45:56,344 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:45:56,344 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:45:56,345 DEBUG client.py Args loaded
+2023-06-05 14:45:56,345 DEBUG client.py Args loaded
+2023-06-05 14:46:06,689 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:46:06,689 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:46:06,689 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:46:06,689 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:46:06,786 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:46:06,786 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:46:06,827 INFO client.py Попытка подключения №1
+2023-06-05 14:46:06,827 INFO client.py Попытка подключения №1
+2023-06-05 14:46:06,833 DEBUG client.py Установлено соединение с сервером
+2023-06-05 14:46:06,833 DEBUG client.py Установлено соединение с сервером
+2023-06-05 14:46:06,846 DEBUG client.py Passwd hash ready: b'e4ba5b471628ba50166158884e3f11c3efd54a2832fae84057770d7fbad208d82abf5e1bfed230c99394f9deee826a09687b7b1bddf5e0ffa7d9ac0107115f63'
+2023-06-05 14:46:06,846 DEBUG client.py Passwd hash ready: b'e4ba5b471628ba50166158884e3f11c3efd54a2832fae84057770d7fbad208d82abf5e1bfed230c99394f9deee826a09687b7b1bddf5e0ffa7d9ac0107115f63'
+2023-06-05 14:46:06,861 DEBUG client.py Presense message = {'action': 'presence', 'time': 1685965566.861839, 'user': {'account_name': 'zfaridr', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwm0vJTkEz3Ff0HlzGX6v\n5ySK5e/TImvpEBRqvfe2BJTrTZE+j7HucYGSeTB1sGDZxTJi9g30h8/hy4HRUX0U\n+zuzx/EWpRWIMPC2qWpfOqr7Mn8rjnRNbnFgGjrbII4LD4OqhZfH6qhmvAtOB0Pe\nrrYDyftY7LzwT7/q6I/1BU5t2Wsq2eNLwIs2qKRWPkAXVqFFTNHzVcu5t4JyIPsw\ngyvGFtWfpku0LsOLRzbprTNBD6H2st7wIjkz9etAUtUuT8Xm0MX79pIppX5XaR0q\nJL4aN52JB3o0pq4qBywIL9swNRT5sGP3Nf6msTHwIQZZLeXAn926lMpZS/DvL2F6\n9wIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-06-05 14:46:06,861 DEBUG client.py Presense message = {'action': 'presence', 'time': 1685965566.861839, 'user': {'account_name': 'zfaridr', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwm0vJTkEz3Ff0HlzGX6v\n5ySK5e/TImvpEBRqvfe2BJTrTZE+j7HucYGSeTB1sGDZxTJi9g30h8/hy4HRUX0U\n+zuzx/EWpRWIMPC2qWpfOqr7Mn8rjnRNbnFgGjrbII4LD4OqhZfH6qhmvAtOB0Pe\nrrYDyftY7LzwT7/q6I/1BU5t2Wsq2eNLwIs2qKRWPkAXVqFFTNHzVcu5t4JyIPsw\ngyvGFtWfpku0LsOLRzbprTNBD6H2st7wIjkz9etAUtUuT8Xm0MX79pIppX5XaR0q\nJL4aN52JB3o0pq4qBywIL9swNRT5sGP3Nf6msTHwIQZZLeXAn926lMpZS/DvL2F6\n9wIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-06-05 14:46:06,862 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 33898), raddr=('127.0.0.1', 7788)>, {'action': 'presence', 'time': 1685965566.861839, 'user': {'account_name': 'zfaridr', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwm0vJTkEz3Ff0HlzGX6v\n5ySK5e/TImvpEBRqvfe2BJTrTZE+j7HucYGSeTB1sGDZxTJi9g30h8/hy4HRUX0U\n+zuzx/EWpRWIMPC2qWpfOqr7Mn8rjnRNbnFgGjrbII4LD4OqhZfH6qhmvAtOB0Pe\nrrYDyftY7LzwT7/q6I/1BU5t2Wsq2eNLwIs2qKRWPkAXVqFFTNHzVcu5t4JyIPsw\ngyvGFtWfpku0LsOLRzbprTNBD6H2st7wIjkz9etAUtUuT8Xm0MX79pIppX5XaR0q\nJL4aN52JB3o0pq4qBywIL9swNRT5sGP3Nf6msTHwIQZZLeXAn926lMpZS/DvL2F6\n9wIDAQAB\n-----END PUBLIC KEY-----'}}) , {}. Вызов из модуля __main__
+2023-06-05 14:46:06,862 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 33898), raddr=('127.0.0.1', 7788)>, {'action': 'presence', 'time': 1685965566.861839, 'user': {'account_name': 'zfaridr', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwm0vJTkEz3Ff0HlzGX6v\n5ySK5e/TImvpEBRqvfe2BJTrTZE+j7HucYGSeTB1sGDZxTJi9g30h8/hy4HRUX0U\n+zuzx/EWpRWIMPC2qWpfOqr7Mn8rjnRNbnFgGjrbII4LD4OqhZfH6qhmvAtOB0Pe\nrrYDyftY7LzwT7/q6I/1BU5t2Wsq2eNLwIs2qKRWPkAXVqFFTNHzVcu5t4JyIPsw\ngyvGFtWfpku0LsOLRzbprTNBD6H2st7wIjkz9etAUtUuT8Xm0MX79pIppX5XaR0q\nJL4aN52JB3o0pq4qBywIL9swNRT5sGP3Nf6msTHwIQZZLeXAn926lMpZS/DvL2F6\n9wIDAQAB\n-----END PUBLIC KEY-----'}}) , {}. Вызов из модуля __main__
+2023-06-05 14:46:06,863 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 33898), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 14:46:06,863 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 33898), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 14:46:07,338 DEBUG client.py Server response = {'response': 511, 'bin': 'b73ca67eb53604d64015f2ee0b3e369b88a8a91d34e24abffaab34ded0024fb127f2b2213bf0bc2e7c53517b80551188ab3d835e6b35224203fcfca7ff4c1fa0'}.
+2023-06-05 14:46:07,338 DEBUG client.py Server response = {'response': 511, 'bin': 'b73ca67eb53604d64015f2ee0b3e369b88a8a91d34e24abffaab34ded0024fb127f2b2213bf0bc2e7c53517b80551188ab3d835e6b35224203fcfca7ff4c1fa0'}.
+2023-06-05 14:46:07,339 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 33898), raddr=('127.0.0.1', 7788)>, {'response': 511, 'bin': 'wXDrGdCmKlCqfBHbMC1XoQ==\n'}) , {}. Вызов из модуля __main__
+2023-06-05 14:46:07,339 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 33898), raddr=('127.0.0.1', 7788)>, {'response': 511, 'bin': 'wXDrGdCmKlCqfBHbMC1XoQ==\n'}) , {}. Вызов из модуля __main__
+2023-06-05 14:46:07,339 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 33898), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 14:46:07,339 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 33898), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 14:46:07,339 DEBUG client.py Разбор сообщения от сервера: {'response': 200}
+2023-06-05 14:46:07,339 DEBUG client.py Разбор сообщения от сервера: {'response': 200}
+2023-06-05 14:46:07,339 DEBUG client.py Запрос списка известных пользователей zfaridr
+2023-06-05 14:46:07,339 DEBUG client.py Запрос списка известных пользователей zfaridr
+2023-06-05 14:46:07,339 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 33898), raddr=('127.0.0.1', 7788)>, {'action': 'get_users', 'time': 1685965567.3394961, 'account_name': 'zfaridr'}) , {}. Вызов из модуля __main__
+2023-06-05 14:46:07,339 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 33898), raddr=('127.0.0.1', 7788)>, {'action': 'get_users', 'time': 1685965567.3394961, 'account_name': 'zfaridr'}) , {}. Вызов из модуля __main__
+2023-06-05 14:46:07,339 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 33898), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 14:46:07,339 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 33898), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 14:55:38,516 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:55:38,516 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 14:55:38,517 DEBUG client.py Args loaded
+2023-06-05 14:55:38,517 DEBUG client.py Args loaded
+2023-06-05 14:55:47,249 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:55:47,249 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 14:55:47,249 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:55:47,249 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 14:55:47,345 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:55:47,345 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 14:55:47,379 INFO client.py Попытка подключения №1
+2023-06-05 14:55:47,379 INFO client.py Попытка подключения №1
+2023-06-05 14:55:47,384 DEBUG client.py Установлено соединение с сервером
+2023-06-05 14:55:47,384 DEBUG client.py Установлено соединение с сервером
+2023-06-05 14:55:47,412 DEBUG client.py Passwd hash ready: b'e4ba5b471628ba50166158884e3f11c3efd54a2832fae84057770d7fbad208d82abf5e1bfed230c99394f9deee826a09687b7b1bddf5e0ffa7d9ac0107115f63'
+2023-06-05 14:55:47,412 DEBUG client.py Passwd hash ready: b'e4ba5b471628ba50166158884e3f11c3efd54a2832fae84057770d7fbad208d82abf5e1bfed230c99394f9deee826a09687b7b1bddf5e0ffa7d9ac0107115f63'
+2023-06-05 14:55:47,414 DEBUG client.py Presense message = {'action': 'presence', 'time': 1685966147.4146607, 'user': {'account_name': 'zfaridr', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwm0vJTkEz3Ff0HlzGX6v\n5ySK5e/TImvpEBRqvfe2BJTrTZE+j7HucYGSeTB1sGDZxTJi9g30h8/hy4HRUX0U\n+zuzx/EWpRWIMPC2qWpfOqr7Mn8rjnRNbnFgGjrbII4LD4OqhZfH6qhmvAtOB0Pe\nrrYDyftY7LzwT7/q6I/1BU5t2Wsq2eNLwIs2qKRWPkAXVqFFTNHzVcu5t4JyIPsw\ngyvGFtWfpku0LsOLRzbprTNBD6H2st7wIjkz9etAUtUuT8Xm0MX79pIppX5XaR0q\nJL4aN52JB3o0pq4qBywIL9swNRT5sGP3Nf6msTHwIQZZLeXAn926lMpZS/DvL2F6\n9wIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-06-05 14:55:47,414 DEBUG client.py Presense message = {'action': 'presence', 'time': 1685966147.4146607, 'user': {'account_name': 'zfaridr', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwm0vJTkEz3Ff0HlzGX6v\n5ySK5e/TImvpEBRqvfe2BJTrTZE+j7HucYGSeTB1sGDZxTJi9g30h8/hy4HRUX0U\n+zuzx/EWpRWIMPC2qWpfOqr7Mn8rjnRNbnFgGjrbII4LD4OqhZfH6qhmvAtOB0Pe\nrrYDyftY7LzwT7/q6I/1BU5t2Wsq2eNLwIs2qKRWPkAXVqFFTNHzVcu5t4JyIPsw\ngyvGFtWfpku0LsOLRzbprTNBD6H2st7wIjkz9etAUtUuT8Xm0MX79pIppX5XaR0q\nJL4aN52JB3o0pq4qBywIL9swNRT5sGP3Nf6msTHwIQZZLeXAn926lMpZS/DvL2F6\n9wIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-06-05 14:55:47,414 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 43194), raddr=('127.0.0.1', 7788)>, {'action': 'presence', 'time': 1685966147.4146607, 'user': {'account_name': 'zfaridr', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwm0vJTkEz3Ff0HlzGX6v\n5ySK5e/TImvpEBRqvfe2BJTrTZE+j7HucYGSeTB1sGDZxTJi9g30h8/hy4HRUX0U\n+zuzx/EWpRWIMPC2qWpfOqr7Mn8rjnRNbnFgGjrbII4LD4OqhZfH6qhmvAtOB0Pe\nrrYDyftY7LzwT7/q6I/1BU5t2Wsq2eNLwIs2qKRWPkAXVqFFTNHzVcu5t4JyIPsw\ngyvGFtWfpku0LsOLRzbprTNBD6H2st7wIjkz9etAUtUuT8Xm0MX79pIppX5XaR0q\nJL4aN52JB3o0pq4qBywIL9swNRT5sGP3Nf6msTHwIQZZLeXAn926lMpZS/DvL2F6\n9wIDAQAB\n-----END PUBLIC KEY-----'}}) , {}. Вызов из модуля __main__
+2023-06-05 14:55:47,414 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 43194), raddr=('127.0.0.1', 7788)>, {'action': 'presence', 'time': 1685966147.4146607, 'user': {'account_name': 'zfaridr', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwm0vJTkEz3Ff0HlzGX6v\n5ySK5e/TImvpEBRqvfe2BJTrTZE+j7HucYGSeTB1sGDZxTJi9g30h8/hy4HRUX0U\n+zuzx/EWpRWIMPC2qWpfOqr7Mn8rjnRNbnFgGjrbII4LD4OqhZfH6qhmvAtOB0Pe\nrrYDyftY7LzwT7/q6I/1BU5t2Wsq2eNLwIs2qKRWPkAXVqFFTNHzVcu5t4JyIPsw\ngyvGFtWfpku0LsOLRzbprTNBD6H2st7wIjkz9etAUtUuT8Xm0MX79pIppX5XaR0q\nJL4aN52JB3o0pq4qBywIL9swNRT5sGP3Nf6msTHwIQZZLeXAn926lMpZS/DvL2F6\n9wIDAQAB\n-----END PUBLIC KEY-----'}}) , {}. Вызов из модуля __main__
+2023-06-05 14:55:47,415 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 43194), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 14:55:47,415 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 43194), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 14:55:47,887 DEBUG client.py Server response = {'response': 511, 'bin': 'cca836e8b34101029353cc0533f416eb1601a6a3797b0c6800b10e4c2ea00bb487660705144ea39cf11ce7937bfac43549bb34643966d5baef5ceb0c1d1e6468'}.
+2023-06-05 14:55:47,887 DEBUG client.py Server response = {'response': 511, 'bin': 'cca836e8b34101029353cc0533f416eb1601a6a3797b0c6800b10e4c2ea00bb487660705144ea39cf11ce7937bfac43549bb34643966d5baef5ceb0c1d1e6468'}.
+2023-06-05 14:55:47,887 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 43194), raddr=('127.0.0.1', 7788)>, {'response': 511, 'bin': 'KL7nW1CrKF4arCf6BXyIvA==\n'}) , {}. Вызов из модуля __main__
+2023-06-05 14:55:47,887 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 43194), raddr=('127.0.0.1', 7788)>, {'response': 511, 'bin': 'KL7nW1CrKF4arCf6BXyIvA==\n'}) , {}. Вызов из модуля __main__
+2023-06-05 14:55:47,887 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 43194), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 14:55:47,887 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 43194), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 14:55:47,888 DEBUG client.py Разбор сообщения от сервера: {'response': 200}
+2023-06-05 14:55:47,888 DEBUG client.py Разбор сообщения от сервера: {'response': 200}
+2023-06-05 14:55:47,888 DEBUG client.py Запрос списка известных пользователей zfaridr
+2023-06-05 14:55:47,888 DEBUG client.py Запрос списка известных пользователей zfaridr
+2023-06-05 14:55:47,888 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 43194), raddr=('127.0.0.1', 7788)>, {'action': 'get_users', 'time': 1685966147.888528, 'account_name': 'zfaridr'}) , {}. Вызов из модуля __main__
+2023-06-05 14:55:47,888 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 43194), raddr=('127.0.0.1', 7788)>, {'action': 'get_users', 'time': 1685966147.888528, 'account_name': 'zfaridr'}) , {}. Вызов из модуля __main__
+2023-06-05 14:55:47,888 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 43194), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 14:55:47,888 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 43194), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 15:00:45,014 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 15:00:45,014 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 15:00:45,015 DEBUG client.py Args loaded
+2023-06-05 15:00:45,015 DEBUG client.py Args loaded
+2023-06-05 15:00:52,711 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 15:00:52,711 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 15:00:52,712 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 15:00:52,712 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 15:00:52,827 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 15:00:52,827 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 15:00:52,846 INFO client.py Попытка подключения №1
+2023-06-05 15:00:52,846 INFO client.py Попытка подключения №1
+2023-06-05 15:00:52,852 DEBUG client.py Установлено соединение с сервером
+2023-06-05 15:00:52,852 DEBUG client.py Установлено соединение с сервером
+2023-06-05 15:00:52,877 DEBUG client.py Passwd hash ready: b'e4ba5b471628ba50166158884e3f11c3efd54a2832fae84057770d7fbad208d82abf5e1bfed230c99394f9deee826a09687b7b1bddf5e0ffa7d9ac0107115f63'
+2023-06-05 15:00:52,877 DEBUG client.py Passwd hash ready: b'e4ba5b471628ba50166158884e3f11c3efd54a2832fae84057770d7fbad208d82abf5e1bfed230c99394f9deee826a09687b7b1bddf5e0ffa7d9ac0107115f63'
+2023-06-05 15:00:52,880 DEBUG client.py Presense message = {'action': 'presence', 'time': 1685966452.880196, 'user': {'account_name': 'zfaridr', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwm0vJTkEz3Ff0HlzGX6v\n5ySK5e/TImvpEBRqvfe2BJTrTZE+j7HucYGSeTB1sGDZxTJi9g30h8/hy4HRUX0U\n+zuzx/EWpRWIMPC2qWpfOqr7Mn8rjnRNbnFgGjrbII4LD4OqhZfH6qhmvAtOB0Pe\nrrYDyftY7LzwT7/q6I/1BU5t2Wsq2eNLwIs2qKRWPkAXVqFFTNHzVcu5t4JyIPsw\ngyvGFtWfpku0LsOLRzbprTNBD6H2st7wIjkz9etAUtUuT8Xm0MX79pIppX5XaR0q\nJL4aN52JB3o0pq4qBywIL9swNRT5sGP3Nf6msTHwIQZZLeXAn926lMpZS/DvL2F6\n9wIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-06-05 15:00:52,880 DEBUG client.py Presense message = {'action': 'presence', 'time': 1685966452.880196, 'user': {'account_name': 'zfaridr', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwm0vJTkEz3Ff0HlzGX6v\n5ySK5e/TImvpEBRqvfe2BJTrTZE+j7HucYGSeTB1sGDZxTJi9g30h8/hy4HRUX0U\n+zuzx/EWpRWIMPC2qWpfOqr7Mn8rjnRNbnFgGjrbII4LD4OqhZfH6qhmvAtOB0Pe\nrrYDyftY7LzwT7/q6I/1BU5t2Wsq2eNLwIs2qKRWPkAXVqFFTNHzVcu5t4JyIPsw\ngyvGFtWfpku0LsOLRzbprTNBD6H2st7wIjkz9etAUtUuT8Xm0MX79pIppX5XaR0q\nJL4aN52JB3o0pq4qBywIL9swNRT5sGP3Nf6msTHwIQZZLeXAn926lMpZS/DvL2F6\n9wIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-06-05 15:00:52,881 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 46472), raddr=('127.0.0.1', 7788)>, {'action': 'presence', 'time': 1685966452.880196, 'user': {'account_name': 'zfaridr', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwm0vJTkEz3Ff0HlzGX6v\n5ySK5e/TImvpEBRqvfe2BJTrTZE+j7HucYGSeTB1sGDZxTJi9g30h8/hy4HRUX0U\n+zuzx/EWpRWIMPC2qWpfOqr7Mn8rjnRNbnFgGjrbII4LD4OqhZfH6qhmvAtOB0Pe\nrrYDyftY7LzwT7/q6I/1BU5t2Wsq2eNLwIs2qKRWPkAXVqFFTNHzVcu5t4JyIPsw\ngyvGFtWfpku0LsOLRzbprTNBD6H2st7wIjkz9etAUtUuT8Xm0MX79pIppX5XaR0q\nJL4aN52JB3o0pq4qBywIL9swNRT5sGP3Nf6msTHwIQZZLeXAn926lMpZS/DvL2F6\n9wIDAQAB\n-----END PUBLIC KEY-----'}}) , {}. Вызов из модуля __main__
+2023-06-05 15:00:52,881 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 46472), raddr=('127.0.0.1', 7788)>, {'action': 'presence', 'time': 1685966452.880196, 'user': {'account_name': 'zfaridr', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwm0vJTkEz3Ff0HlzGX6v\n5ySK5e/TImvpEBRqvfe2BJTrTZE+j7HucYGSeTB1sGDZxTJi9g30h8/hy4HRUX0U\n+zuzx/EWpRWIMPC2qWpfOqr7Mn8rjnRNbnFgGjrbII4LD4OqhZfH6qhmvAtOB0Pe\nrrYDyftY7LzwT7/q6I/1BU5t2Wsq2eNLwIs2qKRWPkAXVqFFTNHzVcu5t4JyIPsw\ngyvGFtWfpku0LsOLRzbprTNBD6H2st7wIjkz9etAUtUuT8Xm0MX79pIppX5XaR0q\nJL4aN52JB3o0pq4qBywIL9swNRT5sGP3Nf6msTHwIQZZLeXAn926lMpZS/DvL2F6\n9wIDAQAB\n-----END PUBLIC KEY-----'}}) , {}. Вызов из модуля __main__
+2023-06-05 15:00:52,881 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 46472), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 15:00:52,881 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 46472), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 15:00:53,356 DEBUG client.py Server response = {'response': 511, 'bin': 'f326734b9531162bc04a8cee1dd2e55ac455a2c67dc12bb235bda55accbe7ebbd3f38de6e060fe27a0b87bc6689d01bb109b1057d1a3d89e7c6d9757c122a3a3'}.
+2023-06-05 15:00:53,356 DEBUG client.py Server response = {'response': 511, 'bin': 'f326734b9531162bc04a8cee1dd2e55ac455a2c67dc12bb235bda55accbe7ebbd3f38de6e060fe27a0b87bc6689d01bb109b1057d1a3d89e7c6d9757c122a3a3'}.
+2023-06-05 15:00:53,356 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 46472), raddr=('127.0.0.1', 7788)>, {'response': 511, 'bin': 'gleeD5FMgNU5/SdH1hpFDQ==\n'}) , {}. Вызов из модуля __main__
+2023-06-05 15:00:53,356 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 46472), raddr=('127.0.0.1', 7788)>, {'response': 511, 'bin': 'gleeD5FMgNU5/SdH1hpFDQ==\n'}) , {}. Вызов из модуля __main__
+2023-06-05 15:00:53,356 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 46472), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 15:00:53,356 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 46472), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 15:00:53,357 DEBUG client.py Разбор сообщения от сервера: {'response': 200}
+2023-06-05 15:00:53,357 DEBUG client.py Разбор сообщения от сервера: {'response': 200}
+2023-06-05 15:00:53,357 DEBUG client.py Запрос списка известных пользователей zfaridr
+2023-06-05 15:00:53,357 DEBUG client.py Запрос списка известных пользователей zfaridr
+2023-06-05 15:00:53,357 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 46472), raddr=('127.0.0.1', 7788)>, {'action': 'get_users', 'time': 1685966453.3574514, 'account_name': 'zfaridr'}) , {}. Вызов из модуля __main__
+2023-06-05 15:00:53,357 DEBUG client.py Была вызвана функция send_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 46472), raddr=('127.0.0.1', 7788)>, {'action': 'get_users', 'time': 1685966453.3574514, 'account_name': 'zfaridr'}) , {}. Вызов из модуля __main__
+2023-06-05 15:00:53,357 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 46472), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 15:00:53,357 DEBUG client.py Была вызвана функция get_message c параметрами (<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 46472), raddr=('127.0.0.1', 7788)>,) , {}. Вызов из модуля __main__
+2023-06-05 15:01:12,705 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 15:01:12,705 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 15:01:12,706 DEBUG client.py Args loaded
+2023-06-05 15:01:12,706 DEBUG client.py Args loaded
+2023-06-05 15:01:19,570 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 15:01:19,570 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 15:01:19,570 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 15:01:19,570 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 15:01:19,670 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 15:01:19,670 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 15:04:36,218 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 15:04:36,218 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 15:04:36,219 DEBUG client.py Args loaded
+2023-06-05 15:04:36,219 DEBUG client.py Args loaded
+2023-06-05 15:04:43,919 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 15:04:43,919 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 15:04:43,919 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 15:04:43,919 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 15:04:44,009 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 15:04:44,009 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 15:08:30,005 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 15:08:30,005 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 15:08:30,006 DEBUG client.py Args loaded
+2023-06-05 15:08:30,006 DEBUG client.py Args loaded
+2023-06-05 15:08:40,527 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 15:08:40,527 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 15:08:40,528 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 15:08:40,528 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 15:08:40,649 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 15:08:40,649 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 15:12:48,052 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 15:12:48,052 DEBUG client.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-06-05 15:12:48,053 DEBUG client.py Args loaded
+2023-06-05 15:12:48,053 DEBUG client.py Args loaded
+2023-06-05 15:12:55,838 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 15:12:55,838 DEBUG client.py Using USERNAME = zfaridr, PASSWD = 20chat23.
+2023-06-05 15:12:55,838 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 15:12:55,838 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7788, имя пользователя: zfaridr
+2023-06-05 15:12:55,938 DEBUG client.py Keys sucsessfully loaded.
+2023-06-05 15:12:55,938 DEBUG client.py Keys sucsessfully loaded.
