@@ -4,7 +4,7 @@ import json
 import threading
 from PyQt5.QtCore import pyqtSignal, QObject
 from sqlalchemy import create_engine, Table, Column, Integer, String, Text, MetaData, DateTime
-from sqlalchemy.orm import mapper, sessionmaker, registry
+from sqlalchemy.orm import sessionmaker, registry
 import datetime
 import logging
 import logging.handlers
@@ -14,9 +14,9 @@ from PyQt5.QtWidgets import QApplication
 import os
 from PyQt5.QtWidgets import QMainWindow, qApp, QMessageBox, QApplication, QListView
 from PyQt5.QtGui import QStandardItemModel, QStandardItem, QBrush, QColor
-from PyQt5.QtCore import pyqtSlot, QEvent, Qt
+from PyQt5.QtCore import pyqtSlot, Qt
 from PyQt5.QtWidgets import QDialog, QLabel, QComboBox, QPushButton, QApplication
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtWidgets import QDialog, QPushButton, QLineEdit, QApplication, QLabel
 from Crypto.PublicKey import RSA
 import hashlib
@@ -62,7 +62,7 @@ RESPONSE_511 = {
 RESPONSE_200 = {RESPONSE: 200}
 
 RESPONSE_202 = {RESPONSE: 202,
-                LIST_INFO:None
+                LIST_INFO: None
                 }
 
 RESPONSE_400 = {
@@ -144,11 +144,12 @@ else:
 
 
 def log(func_to_log):
-    def log_saver(*args , **kwargs):
+    def log_saver(*args, **kwargs):
         logger.debug(f'Была вызвана функция {func_to_log.__name__} c параметрами {args} , {kwargs}. Вызов из модуля {func_to_log.__module__}')
         ret = func_to_log(*args , **kwargs)
         return ret
     return log_saver
+
 
 @log
 def get_message(client):
@@ -213,21 +214,17 @@ class ClientDatabase:
                         Column('date', DateTime)
                         )
 
-        
         contacts = Table('contacts', mapper_reg.metadata,
                          Column('id', Integer, primary_key=True),
                          Column('name', String, unique=True)
                          )
 
-        
         self.metadata.create_all(self.database_engine)
 
-        
         mapper_reg.map_imperatively(self.KnownUsers, users)
         mapper_reg.map_imperatively(self.MessageStat, history)
         mapper_reg.map_imperatively(self.Contacts, contacts)
 
-        
         Session = sessionmaker(bind=self.database_engine)
         self.session = Session()
 
@@ -329,7 +326,6 @@ class ClientTransport(threading.Thread, QObject):
     
     def connection_init(self, port, ip):
         self.transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
         self.transport.settimeout(5)
 
         connected = False
@@ -360,7 +356,6 @@ class ClientTransport(threading.Thread, QObject):
 
         pubkey = self.keys.publickey().export_key().decode('ascii')
 
-        
         with socket_lock:
             presense = {
                 ACTION: PRESENCE,
@@ -408,7 +403,6 @@ class ClientTransport(threading.Thread, QObject):
             else:
                 logger.debug(f'Принят неизвестный код подтверждения {message[RESPONSE]}')
 
-        
         elif ACTION in message and message[ACTION] == MESSAGE and SENDER in message and DESTINATION in message \
                 and MESSAGE_TEXT in message and message[DESTINATION] == self.username:
             logger.debug(f'Получено сообщение от пользователя {message[SENDER]}:{message[MESSAGE_TEXT]}')
@@ -416,7 +410,6 @@ class ClientTransport(threading.Thread, QObject):
             self.new_message.emit(message[SENDER])
 
 
-    
     def contacts_list_update(self):
         self.database.contacts_clear()
         logger.debug(f'Запрос контакт листа для пользователся {self.name}')
@@ -555,7 +548,6 @@ class ClientTransport(threading.Thread, QObject):
 logger = logging.getLogger('client')
 
 
-
 class Ui_MainClientWindow(object):
     def setupUi(self, MainClientWindow):
         MainClientWindow.setObjectName("MainClientWindow")
@@ -639,8 +631,6 @@ class Ui_MainClientWindow(object):
         self.menu_del_contact.setText(_translate("MainClientWindow", "Удалить контакт"))
 
 
-
-
 class AddContactDialog(QDialog):
     def __init__(self, transport, database):
         super().__init__()
@@ -675,7 +665,6 @@ class AddContactDialog(QDialog):
 
         
         self.possible_contacts_update()
-        
         self.btn_refresh.clicked.connect(self.update_possible_contacts)
 
     
@@ -694,8 +683,6 @@ class AddContactDialog(QDialog):
         else:
             logger.debug('Обновление списка пользователей с сервера выполнено')
             self.possible_contacts_update()
-
-
 
 
 logger = logging.getLogger('client')
@@ -729,8 +716,6 @@ class DelContactDialog(QDialog):
         self.btn_cancel.clicked.connect(self.close)
 
         self.selector.addItems(sorted(self.database.get_contacts()))
-
-
 
 
 class UserNameDialog(QDialog):
@@ -1007,7 +992,6 @@ def arg_parser():
     return server_address, server_port, client_name, client_passwd
 
 
-
 if __name__ == '__main__':
     server_address, server_port, client_name, client_passwd = arg_parser()
     logger.debug('Args loaded')
@@ -1059,7 +1043,6 @@ if __name__ == '__main__':
     main_window.make_connection(transport)
     main_window.setWindowTitle(f'Чат Программа alpha release - {client_name}')
     client_app.exec_()
-
     
     transport.transport_shutdown()
     transport.join()

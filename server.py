@@ -3,7 +3,6 @@ import os
 import argparse
 import logging
 import configparser
-import logs.config_server_log
 from common.utils import *
 from common.decos import log
 from server.core import MessageProcessor
@@ -17,7 +16,6 @@ logger = logging.getLogger('server')
 
 @log
 def arg_parser(default_port, default_address):
-    
     logger.debug(
         f'Инициализация парсера аргументов коммандной строки: {sys.argv}')
     parser = argparse.ArgumentParser()
@@ -34,7 +32,6 @@ def arg_parser(default_port, default_address):
 
 @log
 def config_load():
-    
     config = configparser.ConfigParser()
     dir_path = os.path.dirname(os.path.realpath(__file__))
     config.read(f"{dir_path}/{'server.ini'}")
