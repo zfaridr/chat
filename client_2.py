@@ -11,10 +11,10 @@ class ClientVer(type):
     def __init__(self, clsname, bases, clsdict):
         clsmethods = []
         for func in clsdict:
-            # Пробуем
+            
             try:
                 ret = dis.get_instructions(clsdict[func])
-                # Если не функция то ловим исключение
+                
             except TypeError:
                 pass
             else:
